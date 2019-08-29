@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+@Library('ostk-pipeline')
+import com.overstock.dx.Pipeline
 node {
     stage('Git checkout') { // for display purposes
         ostkCheckout()
