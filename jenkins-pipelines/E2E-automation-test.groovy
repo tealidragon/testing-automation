@@ -1,10 +1,12 @@
 #!/usr/bin/env groovy
 
-@Library('ostk-pipeline')
-import com.overstock.dx.Pipeline
 node {
     stage('Git checkout') { // for display purposes
-        ostkCheckout()
+        git(
+                url: 'https://git.overstock.com/scm/clubo/earlyaccess-automation-testing.git',
+                credentialsId: 'b9cdfc06-1cbc-4d1d-b489-87414f67db3b',
+                branch: 'master'
+        )
     }
     stage('Smoke') {
         try {
