@@ -20,7 +20,6 @@
         <serenity.maven.version>1.5.8</serenity.maven.version>
         <serenity.cucumber.version>1.0.15</serenity.cucumber.version>
         <webdriver.driver>chrome</webdriver.driver>
-        <webdriver.chrome.driver>chromedriver.exe</webdriver.chrome.driver>
     </properties>
 
     <dependencies>
@@ -44,7 +43,7 @@
             <artifactId>serenity-rest-assured</artifactId>
             <version>${serenity.version}</version>
         </dependency>
-<!-- Zalenium (selenium grid) Integration -->
+        <!-- Zalenium (selenium grid) Integration -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-zalenium</artifactId>
@@ -55,6 +54,111 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+
+        <!--  Club O    -->
+        <dependency>
+            <groupId>com.overstock.clubo</groupId>
+            <artifactId>ClubOCommon</artifactId>
+            <version>1.53.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jaxb-api</artifactId>
+                    <groupId>jaxb</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>dnsjava</artifactId>
+                    <groupId>org.dnsjava</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>JavaFramework</artifactId>
+                    <groupId>com.overstock.arch</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>annotations</artifactId>
+                    <groupId>net.sourceforge.findbugs</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.overstock.clubo</groupId>
+            <artifactId>ClubOServiceTesting-Common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <!--<exclusion>
+                    <groupId>org.dnsjava</groupId>
+                    <artifactId>dnsjava</artifactId>
+                </exclusion>-->
+                <exclusion>
+                    <artifactId>log4j-1.2-api</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.webdev.e4x</groupId>
+                    <artifactId>E4XShopping</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-vault-client-service</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-androidpay-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-applepay-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-klarna-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-bitcoin-client</artifactId>
+                </exclusion>
+                <!--<exclusion>-->
+                <!--<groupId>com.overstock.ccc</groupId>-->
+                <!--<artifactId>CCCWebService-client</artifactId>-->
+                <!--</exclusion>-->
+                <exclusion>
+                    <groupId>com.oracle.jdbc</groupId>
+                    <artifactId>ons</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- Postgres Db Driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
         </dependency>
     </dependencies>
     <build>

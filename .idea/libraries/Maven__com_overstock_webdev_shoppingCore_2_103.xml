@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev:shoppingCore:2.103">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingCore/2.103/shoppingCore-2.103.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingCore/2.103/shoppingCore-2.103-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingCore/2.103/shoppingCore-2.103-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

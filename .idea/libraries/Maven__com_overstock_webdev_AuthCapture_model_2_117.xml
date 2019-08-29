@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev:AuthCapture-model:2.117">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/AuthCapture-model/2.117/AuthCapture-model-2.117.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/AuthCapture-model/2.117/AuthCapture-model-2.117-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/AuthCapture-model/2.117/AuthCapture-model-2.117-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev.test:CASAutomationIntegration:trunk-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CASAutomationIntegration/trunk-SNAPSHOT/CASAutomationIntegration-trunk-20190822.142232-4451.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CASAutomationIntegration/trunk-SNAPSHOT/CASAutomationIntegration-trunk-20190822.142232-4451-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CASAutomationIntegration/trunk-SNAPSHOT/CASAutomationIntegration-trunk-20190822.142232-4451-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

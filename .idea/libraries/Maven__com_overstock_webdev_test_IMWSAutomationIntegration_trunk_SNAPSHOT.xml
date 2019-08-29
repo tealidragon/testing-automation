@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev.test:IMWSAutomationIntegration:trunk-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/IMWSAutomationIntegration/trunk-SNAPSHOT/IMWSAutomationIntegration-trunk-20190822.141731-4548.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/IMWSAutomationIntegration/trunk-SNAPSHOT/IMWSAutomationIntegration-trunk-20190822.141731-4548-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/IMWSAutomationIntegration/trunk-SNAPSHOT/IMWSAutomationIntegration-trunk-20190822.141731-4548-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

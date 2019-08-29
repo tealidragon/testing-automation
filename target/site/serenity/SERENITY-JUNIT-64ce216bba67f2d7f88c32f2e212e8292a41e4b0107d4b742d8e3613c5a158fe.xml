@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="1" name="api.BlazeDemoAPITest" skipped="0" tests="2" time="8.56" timestamp="2019-08-28 11:14:12"><testcase classname="api.BlazeDemoAPITest" name="Verify braze API"><error type="java.lang.ExceptionInInitializerError"/><system-err>null
+steps.api.FindFlightsAPISteps.brazeAPIcall(FindFlightsAPISteps.java:32)
+api.BlazeDemoAPITest.verifyBrazeAPI(BlazeDemoAPITest.java:29)
+</system-err></testcase><testcase classname="api.BlazeDemoAPITest" name="Verify create early access"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;415&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;415&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;415&gt;.
+
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:656)
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+steps.api.FindFlightsAPISteps.earlyAccessCreateAPIcall(FindFlightsAPISteps.java:79)
+api.BlazeDemoAPITest.verifyCreateEarlyAccess(BlazeDemoAPITest.java:36)
+</system-err></testcase></testsuite>

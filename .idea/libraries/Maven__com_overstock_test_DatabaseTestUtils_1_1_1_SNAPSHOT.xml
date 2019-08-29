@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.test:DatabaseTestUtils:1.1.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/test/DatabaseTestUtils/1.1.1-SNAPSHOT/DatabaseTestUtils-1.1.1-20150623.221947-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/test/DatabaseTestUtils/1.1.1-SNAPSHOT/DatabaseTestUtils-1.1.1-20150623.221947-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/test/DatabaseTestUtils/1.1.1-SNAPSHOT/DatabaseTestUtils-1.1.1-20150623.221947-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

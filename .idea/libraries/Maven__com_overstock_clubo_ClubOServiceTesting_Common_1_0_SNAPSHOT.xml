@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.clubo:ClubOServiceTesting-Common:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOServiceTesting-Common/1.0-SNAPSHOT/ClubOServiceTesting-Common-1.0-20190829.134611-7245.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOServiceTesting-Common/1.0-SNAPSHOT/ClubOServiceTesting-Common-1.0-20190829.134611-7245-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOServiceTesting-Common/1.0-SNAPSHOT/ClubOServiceTesting-Common-1.0-20190829.134611-7245-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

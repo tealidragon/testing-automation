@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.clubo:ClubOService-client:1.84.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOService-client/1.84.3/ClubOService-client-1.84.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOService-client/1.84.3/ClubOService-client-1.84.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/clubo/ClubOService-client/1.84.3/ClubOService-client-1.84.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

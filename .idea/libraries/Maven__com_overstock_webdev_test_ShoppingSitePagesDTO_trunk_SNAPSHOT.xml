@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev.test:ShoppingSitePagesDTO:trunk-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/ShoppingSitePagesDTO/trunk-SNAPSHOT/ShoppingSitePagesDTO-trunk-20190822.142043-4371.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/ShoppingSitePagesDTO/trunk-SNAPSHOT/ShoppingSitePagesDTO-trunk-20190822.142043-4371-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/ShoppingSitePagesDTO/trunk-SNAPSHOT/ShoppingSitePagesDTO-trunk-20190822.142043-4371-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

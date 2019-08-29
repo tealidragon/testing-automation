@@ -1,0 +1,191 @@
+[2019-08-29 09:03:29,802 INFO root] Taurus CLI Tool v1.13.8
+[2019-08-29 09:03:29,803 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': '/var/folders/_g/j6jw1prj0413v459hxzm19vr0000gp/T/bzt_jQMo1S.log', 'option': None, 'aliases': []}
+[2019-08-29 09:03:29,803 DEBUG root] Python: CPython 2.7.16
+[2019-08-29 09:03:29,803 DEBUG root] OS: ('Darwin', 'tbuchanans-mbp.overstock.com', '18.7.0', 'Darwin Kernel Version 18.7.0: Tue Aug 20 16:57:14 PDT 2019; root:xnu-4903.271.2~2/RELEASE_X86_64', 'x86_64', 'i386')
+[2019-08-29 09:03:29,804 INFO root] Starting with configs: ['src/test/java/performance/EarlyAccessPerformanceTest.yml']
+[2019-08-29 09:03:29,804 DEBUG root] Using personal config: /Users/tbuchanan/.bzt-rc
+[2019-08-29 09:03:29,804 INFO Engine] Configuring...
+[2019-08-29 09:03:29,825 DEBUG Engine] Base configs list: [u'/usr/local/lib/python2.7/site-packages/bzt/resources/10-base-config.yml']
+[2019-08-29 09:03:29,825 DEBUG Engine.Configuration] Configs: [u'/usr/local/lib/python2.7/site-packages/bzt/resources/10-base-config.yml']
+[2019-08-29 09:03:29,825 DEBUG Engine.Configuration] Reading /usr/local/lib/python2.7/site-packages/bzt/resources/10-base-config.yml as YAML
+[2019-08-29 09:03:29,850 DEBUG Engine] User configs list: ['/Users/tbuchanan/.bzt-rc', 'src/test/java/performance/EarlyAccessPerformanceTest.yml']
+[2019-08-29 09:03:29,850 DEBUG Engine.Configuration] Configs: ['/Users/tbuchanan/.bzt-rc', 'src/test/java/performance/EarlyAccessPerformanceTest.yml']
+[2019-08-29 09:03:29,850 DEBUG Engine.Configuration] Reading /Users/tbuchanan/.bzt-rc as YAML
+[2019-08-29 09:03:29,855 DEBUG Engine.Configuration] Reading src/test/java/performance/EarlyAccessPerformanceTest.yml as YAML
+[2019-08-29 09:03:29,856 DEBUG Engine.Configuration] Configs: ['/Users/tbuchanan/.bzt-rc', 'src/test/java/performance/EarlyAccessPerformanceTest.yml']
+[2019-08-29 09:03:29,857 DEBUG Engine.Configuration] Reading /Users/tbuchanan/.bzt-rc as YAML
+[2019-08-29 09:03:29,861 DEBUG Engine.Configuration] Reading src/test/java/performance/EarlyAccessPerformanceTest.yml as YAML
+[2019-08-29 09:03:29,872 DEBUG Engine] Requesting updates info: https://gettaurus.org/updates/?version=1.13.8&installID=macos-8c8590caf493
+[2019-08-29 09:03:29,872 DEBUG HTTPClient] Making HTTP request GET https://gettaurus.org/updates/?version=1.13.8&installID=macos-8c8590caf493
+[2019-08-29 09:03:29,878 INFO Engine] Artifacts dir: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020
+[2019-08-29 09:03:29,878 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective
+[2019-08-29 09:03:29,881 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): gettaurus.org:443
+[2019-08-29 09:03:29,881 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.yml
+[2019-08-29 09:03:29,906 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.json
+[2019-08-29 09:03:29,906 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/merged.yml
+[2019-08-29 09:03:29,907 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/merged.yml
+[2019-08-29 09:03:29,908 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/merged.json
+[2019-08-29 09:03:29,908 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/merged.json
+[2019-08-29 09:03:29,908 DEBUG Engine] Add existing artifact (move=False): src/test/java/performance/EarlyAccessPerformanceTest.yml
+[2019-08-29 09:03:29,908 DEBUG Engine] Copying src/test/java/performance/EarlyAccessPerformanceTest.yml to /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/EarlyAccessPerformanceTest.yml
+[2019-08-29 09:03:29,909 DEBUG root] Closing log handler: /var/folders/_g/j6jw1prj0413v459hxzm19vr0000gp/T/bzt_jQMo1S.log
+[2019-08-29 09:03:29,910 DEBUG root] Switched writing logs to /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/bzt.log
+[2019-08-29 09:03:29,910 DEBUG root] Linting config
+[2019-08-29 09:03:29,912 INFO Engine] Preparing...
+[2019-08-29 09:03:29,913 DEBUG Engine] Module config: consolidator {'class': u'bzt.modules.aggregator.ConsolidatingAggregator'}
+[2019-08-29 09:03:29,913 DEBUG root] Importing module: bzt.modules.aggregator
+[2019-08-29 09:03:29,990 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/usr/local/lib/python2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2019-08-29 09:03:29,991 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2019-08-29 09:03:29,991 DEBUG Engine] Module config: monitoring {'class': u'bzt.modules.monitoring.Monitoring'}
+[2019-08-29 09:03:29,991 DEBUG root] Importing module: bzt.modules.monitoring
+[2019-08-29 09:03:29,992 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/usr/local/lib/python2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2019-08-29 09:03:29,992 DEBUG Engine] Module config: local {'class': u'bzt.modules.provisioning.Local'}
+[2019-08-29 09:03:29,992 DEBUG root] Importing module: bzt.modules.provisioning
+[2019-08-29 09:03:29,992 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/usr/local/lib/python2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2019-08-29 09:03:29,993 DEBUG Engine] Module config: jmeter {'properties': {'jmeter.save.saveservice.autoflush': u'true', 'jmeter.save.saveservice.connect_time': u'true', 'summariser.name': u'', 'jmeterengine.force.system.exit': u'true'}, 'plugins': [u'jpgc-casutg', u'jpgc-dummy', u'jpgc-ffw', u'jpgc-fifo', u'jpgc-functions', u'jpgc-json', u'jpgc-perfmon', u'jpgc-prmctl', u'jpgc-tst'], 'class': u'bzt.modules.jmeter.JMeterExecutor', 'protocol-handlers': {'http': u'bzt.jmx.http.HTTPProtocolHandler'}}
+[2019-08-29 09:03:29,993 DEBUG root] Importing module: bzt.modules.jmeter
+[2019-08-29 09:03:30,001 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/usr/local/lib/python2.7/site-packages/bzt/modules/jmeter.pyc'>
+[2019-08-29 09:03:30,001 DEBUG Engine.local] Preparing executor: jmeter/4526921296
+[2019-08-29 09:03:30,001 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter.log
+[2019-08-29 09:03:30,001 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2019-08-29 09:03:30,002 DEBUG Engine.jmeter] Port 4445 is free
+[2019-08-29 09:03:30,002 DEBUG Engine.jmeter] Using port 4445 for management
+[2019-08-29 09:03:30,002 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/requests.jmx
+[2019-08-29 09:03:30,003 DEBUG root] Importing module: bzt.jmx.http
+[2019-08-29 09:03:30,003 DEBUG root] Loading class: 'HTTPProtocolHandler' from <module 'bzt.jmx.http' from '/usr/local/lib/python2.7/site-packages/bzt/jmx/http.pyc'>
+[2019-08-29 09:03:30,005 DEBUG JMeterScenarioBuilder] Saving JMX to: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/requests.jmx
+[2019-08-29 09:03:30,006 DEBUG Engine.jmeter] Additional system properties {'sun.net.inetaddr.ttl': 0}
+[2019-08-29 09:03:30,006 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/system.properties
+[2019-08-29 09:03:30,006 DEBUG Engine.jmeter] Additional properties: {'jmeter.save.saveservice.autoflush': u'true', 'jmeter.save.saveservice.connect_time': u'true', 'user.classpath': '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020:/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020', 'sampleresult.default.encoding': 'UTF-8', 'summariser.name': u'', 'jmeterengine.force.system.exit': u'true', 'jmeter.save.saveservice.timestamp_format': 'ms', 'jmeterengine.nongui.maxport': 4445, 'jmeterengine.nongui.port': 4445}
+[2019-08-29 09:03:30,006 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter-bzt.properties
+[2019-08-29 09:03:30,006 DEBUG Engine.jmeter.JavaVM] Trying JavaVM: ['java', '-version']
+[2019-08-29 09:03:30,007 DEBUG root] Executing shell: ['java', '-version'] at .
+[2019-08-29 09:03:30,115 DEBUG Engine.jmeter.JavaVM] JavaVM output: 
+[2019-08-29 09:03:30,115 DEBUG Engine.jmeter.TclLibrary] We don't need to check tcl library on this platform
+[2019-08-29 09:03:30,115 DEBUG Engine.jmeter.JMeter] Trying JMeter..
+[2019-08-29 09:03:30,116 DEBUG root] Executing shell: ['/Users/tbuchanan/.bzt/jmeter-taurus/5.1.1/bin/jmeter.sh', '-j', '/var/folders/_g/j6jw1prj0413v459hxzm19vr0000gp/T/jmeterdTjZPnlog', '--version'] at .
+[2019-08-29 09:03:30,369 DEBUG urllib3.connectionpool] https://gettaurus.org:443 "GET /updates/?version=1.13.8&installID=macos-8c8590caf493 HTTP/1.1" 200 40
+[2019-08-29 09:03:30,370 DEBUG Engine] Taurus updates info: {u'needsUpgrade': False, u'latest': u'1.13.8'}
+[2019-08-29 09:03:30,370 DEBUG Engine] Installation is up-to-date
+[2019-08-29 09:03:31,139 DEBUG Engine.jmeter.JMeter] JMeter check:     _    ____   _    ____ _   _ _____       _ __  __ _____ _____ _____ ____     
+   / \  |  _ \ / \  / ___| | | | ____|     | |  \/  | ____|_   _| ____|  _ \   
+  / _ \ | |_) / _ \| |   | |_| |  _|    _  | | |\/| |  _|   | | |  _| | |_) | 
+ / ___ \|  __/ ___ \ |___|  _  | |___  | |_| | |  | | |___  | | | |___|  _ <  
+/_/   \_\_| /_/   \_\____|_| |_|_____|  \___/|_|  |_|_____| |_| |_____|_| \_\ 5.1.1 r1855137  
+
+Copyright (c) 1999-2019 The Apache Software Foundation
+
+ / 
+[2019-08-29 09:03:31,141 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/kpi.jtl
+[2019-08-29 09:03:31,142 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/error.jtl
+[2019-08-29 09:03:31,143 DEBUG Engine.jmeter.LoadSettingsProcessor] Load: LoadSpec(concurrency=10, throughput=None, ramp_up=60.0, hold=90.0, iterations=0, duration=150.0, steps=None)
+[2019-08-29 09:03:31,145 DEBUG Engine.jmeter.LoadSettingsProcessor.ThreadGroupHandler] Converting ThreadGroup (basic-performance-test) to ConcurrencyThreadGroup and apply load parameters
+[2019-08-29 09:03:31,145 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+[2019-08-29 09:03:31,145 DEBUG JMX] Saving JMX to: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+[2019-08-29 09:03:31,146 DEBUG root] Executing shell: ['/Users/tbuchanan/.bzt/jmeter-taurus/5.1.1/bin/PluginsManagerCMD.sh', 'install-for-jmx', '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx'] at .
+[2019-08-29 09:03:32,838 DEBUG Engine.jmeter.JMeter] Try to detect plugins for /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+2019-08-29 09:03:31,843 INFO o.j.r.PluginManagerCMD: Command is: install-for-jmx
+2019-08-29 09:03:31,936 INFO o.j.r.JARSourceHTTP: Found cached repo
+2019-08-29 09:03:32,101 INFO o.j.r.PluginManager: Plugins Status: [jpgc-functions=2.1, jpgc-casutg=2.9, jpgc-dummy=0.4, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.7, jpgc-prmctl=0.4, jpgc-perfmon=2.1, jpgc-plugins-manager=1.3, jpgc-tst=2.5, jmeter-core=5.1.1, jmeter-ftp=5.1.1, jmeter-http=5.1.1, jmeter-jdbc=5.1.1, jmeter-jms=5.1.1, jmeter-junit=5.1.1, jmeter-java=5.1.1, jmeter-ldap=5.1.1, jmeter-mail=5.1.1, jmeter-mongodb=5.1.1, jmeter-native=5.1.1, jmeter-tcp=5.1.1, jmeter-components=5.1.1]
+2019-08-29 09:03:32,103 INFO o.j.r.PluginManagerCMD: Params line is: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+2019-08-29 09:03:32,302 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-08-29 09:03:32,315 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-08-29 09:03:32,320 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2019-08-29 09:03:32,349 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2019-08-29 09:03:32,352 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2019-08-29 09:03:32,420 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-08-29 09:03:32,420 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-08-29 09:03:32,420 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-08-29 09:03:32,420 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-08-29 09:03:32,420 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-08-29 09:03:32,421 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-08-29 09:03:32,464 INFO o.j.r.PluginManager: Finishing without changes
+
+
+[2019-08-29 09:03:32,838 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter.out
+[2019-08-29 09:03:32,838 DEBUG Engine] New artifact filename: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter.err
+[2019-08-29 09:03:32,839 DEBUG Engine] Module config: final-stats {'class': u'bzt.modules.reporting.FinalStatus'}
+[2019-08-29 09:03:32,839 DEBUG root] Importing module: bzt.modules.reporting
+[2019-08-29 09:03:32,849 DEBUG easyprocess] version=0.2.7
+[2019-08-29 09:03:32,851 DEBUG pyvirtualdisplay] version=0.2.4
+[2019-08-29 09:03:32,852 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from '/usr/local/lib/python2.7/site-packages/bzt/modules/reporting.pyc'>
+[2019-08-29 09:03:32,853 DEBUG Engine] Module config: console {'class': u'bzt.modules.console.ConsoleStatusReporter'}
+[2019-08-29 09:03:32,853 DEBUG root] Importing module: bzt.modules.console
+[2019-08-29 09:03:32,853 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from '/usr/local/lib/python2.7/site-packages/bzt/modules/console.pyc'>
+[2019-08-29 09:03:32,862 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.yml
+[2019-08-29 09:03:32,884 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.json
+[2019-08-29 09:03:32,885 INFO Engine] Starting...
+[2019-08-29 09:03:32,885 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x10dcf9c90>
+[2019-08-29 09:03:32,885 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x1021f9c10>
+[2019-08-29 09:03:32,885 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x1021dbc10>
+[2019-08-29 09:03:32,886 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x10ddd64d0>
+[2019-08-29 09:03:32,886 INFO Engine.console] Waiting for results...
+[2019-08-29 09:03:32,886 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x1021b06d0>
+[2019-08-29 09:03:32,886 DEBUG Engine.local] Delay setup for jmeter/basic-performance-test: 0(start-at) + 0(delay) = 0
+[2019-08-29 09:03:32,887 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.yml
+[2019-08-29 09:03:32,908 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.json
+[2019-08-29 09:03:32,909 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2019-08-29 09:03:32,909 DEBUG root] Leveled up log file verbosity
+[2019-08-29 09:03:32,909 DEBUG root] Executing shell: ['/Users/tbuchanan/.bzt/jmeter-taurus/5.1.1/bin/jmeter.sh', '-t', '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx', '-j', '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter.log', '-q', '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/jmeter-bzt.properties', '-n', '-S', '/Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/system.properties'] at /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline
+[2019-08-29 09:03:32,921 DEBUG Engine.local] Starting execution: jmeter/basic-performance-test, rest of available slots: 9223372036854775806
+[2019-08-29 09:03:32,921 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2019-08-29 09:03:33,141 INFO Engine.console] Waiting for finish...
+[2019-08-29 09:06:06,330 WARNING Engine] Please wait for graceful shutdown...
+[2019-08-29 09:06:06,334 DEBUG root] Leveled up log file verbosity
+[2019-08-29 09:06:06,334 INFO Engine] Shutting down...
+[2019-08-29 09:06:06,338 DEBUG Engine] Current stop reason: None
+[2019-08-29 09:06:06,339 DEBUG Engine.local] Shutdown jmeter/basic-performance-test
+[2019-08-29 09:06:06,340 DEBUG Engine.console] Restoring logging streams, [<logging.StreamHandler object at 0x1021a6c90>]/{<logging.StreamHandler object at 0x1021a6c90>: <open file '<stdout>', mode 'w' at 0x100a89150>}
+[2019-08-29 09:06:06,342 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.yml
+[2019-08-29 09:06:06,362 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.json
+[2019-08-29 09:06:06,363 INFO Engine] Post-processing...
+[2019-08-29 09:06:06,363 DEBUG Engine.local] Post-process jmeter/basic-performance-test
+[2019-08-29 09:06:06,364 DEBUG Engine] Add existing artifact (move=True): /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+[2019-08-29 09:06:06,364 DEBUG Engine] No need to copy /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/modified_requests.jmx
+[2019-08-29 09:06:06,364 DEBUG Engine.jmeter.JTLReader] Buffer len: 2; Known errors count: 0
+[2019-08-29 09:06:06,364 DEBUG Engine.jmeter.JTLReader] Aggregating: 1567091164, 2 in buffer
+[2019-08-29 09:06:06,365 DEBUG Engine.jmeter.JTLErrorsReader] Got error info for 1567091164, labels: ['', 'http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/8836']
+[2019-08-29 09:06:06,366 DEBUG Engine.jmeter.JTLReader] Buffer len: 1; Known errors count: 0
+[2019-08-29 09:06:06,369 DEBUG Engine.jmeter.JTLReader] Aggregating: 1567091165, 1 in buffer
+[2019-08-29 09:06:06,369 DEBUG Engine.jmeter.JTLErrorsReader] Got error info for 1567091165, labels: ['', 'http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/8836']
+[2019-08-29 09:06:06,370 DEBUG Engine.jmeter.JTLReader] Buffer len: 0; Known errors count: 0
+[2019-08-29 09:06:06,370 DEBUG Engine.consolidator] Consolidator buffer[4]: [1567091162, 1567091163, 1567091164, 1567091165]
+[2019-08-29 09:06:06,370 DEBUG Engine.consolidator] Merging into 1567091162
+[2019-08-29 09:06:06,370 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2019-08-29 09:06:06,376 DEBUG Engine.consolidator] Processed datapoint: 1567091162/ConsolidatingAggregator@4330593296
+[2019-08-29 09:06:06,376 DEBUG Engine.consolidator] Merging into 1567091163
+[2019-08-29 09:06:06,376 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2019-08-29 09:06:06,382 DEBUG Engine.consolidator] Processed datapoint: 1567091163/ConsolidatingAggregator@4330593296
+[2019-08-29 09:06:06,382 DEBUG Engine.consolidator] Merging into 1567091164
+[2019-08-29 09:06:06,382 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2019-08-29 09:06:06,388 DEBUG Engine.consolidator] Processed datapoint: 1567091164/ConsolidatingAggregator@4330593296
+[2019-08-29 09:06:06,388 DEBUG Engine.consolidator] Merging into 1567091165
+[2019-08-29 09:06:06,388 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2019-08-29 09:06:06,393 DEBUG Engine.consolidator] Processed datapoint: 1567091165/ConsolidatingAggregator@4330593296
+[2019-08-29 09:06:06,393 INFO Engine.final-stats] Test duration: 0:02:34
+[2019-08-29 09:06:06,393 INFO Engine.final-stats] Samples count: 1555, 100.00% failures
+[2019-08-29 09:06:06,393 INFO Engine.final-stats] Average times: total 0.024, latency 0.024, connect 0.006
+[2019-08-29 09:06:06,394 INFO Engine.final-stats] Percentiles:
+(0lqqqqqqqqqqqqqqqwqqqqqqqqqqqqqqqk(B
+(0x(B Percentile, % (0x(B Resp. Time, s (0x(B
+(0tqqqqqqqqqqqqqqqnqqqqqqqqqqqqqqqu(B
+(0x(B           0.0 (0x(B         0.008 (0x(B
+(0x(B          50.0 (0x(B         0.016 (0x(B
+(0x(B          90.0 (0x(B         0.029 (0x(B
+(0x(B          95.0 (0x(B           0.1 (0x(B
+(0x(B          99.0 (0x(B         0.191 (0x(B
+(0x(B          99.9 (0x(B         0.236 (0x(B
+(0x(B         100.0 (0x(B         0.244 (0x(B
+(0mqqqqqqqqqqqqqqqvqqqqqqqqqqqqqqqj(B
+[2019-08-29 09:06:06,395 INFO Engine.final-stats] Request label stats:
+(0lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwqqqqqqqqwqqqqqqqwqqqqqqqqwqqqqqqqk(B
+(0x(B label                                                                           (0x(B status (0x(B  succ (0x(B avg_rt (0x(B error (0x(B
+(0tqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqnqqqqqqqqnqqqqqqqnqqqqqqqqnqqqqqqqu(B
+(0x(B http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/8836 (0x(B  FAIL  (0x(B 0.00% (0x(B  0.024 (0x(B       (0x(B
+(0mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqvqqqqqqqqvqqqqqqqvqqqqqqqqvqqqqqqqj(B
+[2019-08-29 09:06:06,395 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2019-08-29 09:06:06,397 DEBUG Engine.Configuration] Dumping YAML config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.yml
+[2019-08-29 09:06:06,416 DEBUG Engine.Configuration] Dumping JSON config into /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/effective.json
+[2019-08-29 09:06:06,417 INFO root] Artifacts dir: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020
+[2019-08-29 09:06:06,417 INFO root] Done performing with code: 0
+[2019-08-29 09:06:06,417 DEBUG root] Closing log handler: /Users/tbuchanan/IdeaProjects/tealidragon/e2e-automation-pipeline/2019-08-29_09-03-29.873020/bzt.log

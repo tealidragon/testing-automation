@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev:shoppingOrderModel:3.107">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingOrderModel/3.107/shoppingOrderModel-3.107.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingOrderModel/3.107/shoppingOrderModel-3.107-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/shoppingOrderModel/3.107/shoppingOrderModel-3.107-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

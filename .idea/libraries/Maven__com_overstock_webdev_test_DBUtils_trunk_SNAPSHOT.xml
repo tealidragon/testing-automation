@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev.test:DBUtils:trunk-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/DBUtils/trunk-SNAPSHOT/DBUtils-trunk-20190822.141631-5237.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/DBUtils/trunk-SNAPSHOT/DBUtils-trunk-20190822.141631-5237-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/DBUtils/trunk-SNAPSHOT/DBUtils-trunk-20190822.141631-5237-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

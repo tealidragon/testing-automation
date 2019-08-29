@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.xps-common:XPS-bind:1.046">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/xps-common/XPS-bind/1.046/XPS-bind-1.046.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/xps-common/XPS-bind/1.046/XPS-bind-1.046-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/xps-common/XPS-bind/1.046/XPS-bind-1.046-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

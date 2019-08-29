@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.fx:ForeignExchangeService-common:1.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/fx/ForeignExchangeService-common/1.7/ForeignExchangeService-common-1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/fx/ForeignExchangeService-common/1.7/ForeignExchangeService-common-1.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/fx/ForeignExchangeService-common/1.7/ForeignExchangeService-common-1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

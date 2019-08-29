@@ -1,0 +1,12 @@
+---
+execution:
+- concurrency: 10
+  hold-for: 1m30s
+  ramp-up: 1m
+  scenario: basic-performance-test
+scenarios:
+  basic-performance-test:
+    requests:
+    - http://blazedemo.com/
+    think-time: 0.75
+

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.finance:ipsws-common:2.68">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/finance/ipsws-common/2.68/ipsws-common-2.68.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/finance/ipsws-common/2.68/ipsws-common-2.68-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/finance/ipsws-common/2.68/ipsws-common-2.68-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

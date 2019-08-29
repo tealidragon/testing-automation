@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.overstock.webdev.test:CommonUtilities:trunk-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CommonUtilities/trunk-SNAPSHOT/CommonUtilities-trunk-20190822.141338-4942.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CommonUtilities/trunk-SNAPSHOT/CommonUtilities-trunk-20190822.141338-4942-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/overstock/webdev/test/CommonUtilities/trunk-SNAPSHOT/CommonUtilities-trunk-20190822.141338-4942-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
