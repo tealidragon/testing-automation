@@ -1,9 +1,9 @@
-#!groovy
+#!/usr/bin/env groovy
 
 node {
-//    stage('Git checkout') { // for display purposes
-//        git 'https://git.overstock.com/scm/clubo/earlyaccess-automation-testing.git'
-//    }
+    stage('Git checkout') { // for display purposes
+        ostkCheckout()
+    }
     stage('Smoke') {
         try {
             sh "mvn clean verify -Dtags='type:Smoke'"
