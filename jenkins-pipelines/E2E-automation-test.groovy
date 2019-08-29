@@ -1,8 +1,6 @@
 #!/usr/bin/env/groovy
 @Library('ostk-pipeline')
 import com.overstock.dx.Pipeline
-@Library('ostk-pipeline')
-import com.overstock.dx.Pipeline
 
 def areDeploying = env.BRANCH_NAME == 'master'
 
