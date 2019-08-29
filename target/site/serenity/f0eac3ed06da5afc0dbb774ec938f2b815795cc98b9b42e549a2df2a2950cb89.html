@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Verify flights search with API</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+        > Verify flights search with API
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-08-2019 12:11</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Blaze Demo API Test</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                    
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="381a159b9ea0b05d664b7ff67b9e564090a48527c4094b8ba87d151e2072d0b1.html">API
+                                    (type)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Verify flights search with API
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">                        &nbsp;
+                    </th>
+
+                    <th width="%" class="step-description-wide-column greentext">
+                        Steps
+                    </th>
+                    <th width="130" class="greentext">Outcome</th>
+                    <th width="80" class="greentext"><i title="Duration" class="far fa-clock"></i></th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="50" class="step-icon">
+                        <a name="0"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                            <span class="top-level-step">
+                                Find flights
+                            </span>
+                            </a>
+                            <span class="evidence">
+                            </span>
+                        </div>
+                    </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">4.55s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection0" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="50" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                POST http://blazedemo.com/reserve.php
+                            </span>
+                            <span class="evidence">
+                                    <span class="piece-of-evidence">
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#restModal-REST-2">
+                        REST Query
+                    </button>
+                </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-2">
+                        <div class="card">
+                            <div class="card-body">
+                                        <h4>Response</h4>
+                                            <p>Status code: 200</p>
+                                            <p>Content Type: application/x-www-form-urlencoded</p>
+                                            <h4>Request Headers</h4>
+                                            <pre>Accept=*/*<br>Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1</pre>
+                                            <h4>Response Headers</h4>
+                                            <pre>Cache-Control: no-cache<br>Content-Type: text/html; charset=UTF-8<br>Date: Wed, 28 Aug 2019 18:11:07 GMT<br>Server: Apache<br>transfer-encoding: chunked<br>Connection: Keep-Alive</pre>
+                                        <h4>Response Body</h4>
+                                            <pre>&lt;html lang=&quot;en&quot;&gt;<br>  &lt;head&gt;<br>    &lt;meta charset=&quot;utf-8&quot;/&gt;<br>    &lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var o=0;o&amp;lt;t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e(&quot;handle&quot;),a=e(3),u=e(4),f=e(&quot;ee&quot;).get(&quot;tracer&quot;),c=e(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;amp;&amp;amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(e,n){s[n]=o(d+n,!0,&quot;api&quot;)}),s.addPageAction=o(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=o(d+&quot;routeName&quot;,!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o=&quot;function&quot;==typeof n;return i(l+&quot;tracer&quot;,[c.now(),e,t],r),function(){if(f.emit((o?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit(&quot;fn-err&quot;,[arguments,this,e],t),e}finally{f.emit(&quot;fn-end&quot;,[c.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){&quot;string&quot;==typeof e&amp;amp;&amp;amp;(e=new Error(e)),i(&quot;err&quot;,[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split(&quot;.&quot;),r=n.split(&quot;.&quot;),a=0;a&amp;lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&amp;amp;&amp;amp;u.indexOf(&quot;Chrome&quot;)===-1&amp;amp;&amp;amp;u.indexOf(&quot;Chromium&quot;)===-1&amp;amp;&amp;amp;(o=&quot;Safari&quot;,i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r=&quot;&quot;,i=0;for(r in e)o.call(e,r)&amp;amp;&amp;amp;(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),&quot;undefined&quot;==typeof t&amp;amp;&amp;amp;(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o&amp;lt;0?0:o);++r&amp;lt;o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;amp;&amp;amp;window.performance.timing&amp;amp;&amp;amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&amp;amp;&amp;amp;e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&amp;amp;&amp;amp;e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c&amp;lt;f;c++)u[c].apply(a,r);var p=s[y[t]];return p&amp;amp;&amp;amp;p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r&amp;lt;t.length;r++)t[r]===n&amp;amp;&amp;amp;t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||&quot;feature&quot;,y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&amp;amp;&amp;amp;(d.aborted=!0,s=d.backlog={})}var u=&quot;nr@context&quot;,f=e(&quot;gos&quot;),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&amp;amp;&amp;amp;Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e(&quot;ee&quot;).get(&quot;handle&quot;);n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||&quot;object&quot;!==n&amp;amp;&amp;amp;&quot;function&quot;!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i=&quot;nr@id&quot;,a=e(&quot;gos&quot;);n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(e&amp;amp;&amp;amp;e.licenseKey&amp;amp;&amp;amp;e.applicationID&amp;amp;&amp;amp;n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f(&quot;mark&quot;,[&quot;onload&quot;,a()+x.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+e.agent,n.parentNode.insertBefore(t,n)}}function o(){&quot;complete&quot;===l.readyState&amp;amp;&amp;amp;i()}function i(){f(&quot;mark&quot;,[&quot;domContent&quot;,a()+x.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;amp;&amp;amp;performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e(&quot;handle&quot;),c=e(3),s=e(&quot;ee&quot;),p=e(2),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;amp;&amp;amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1130.min.js&quot;},b=g&amp;amp;&amp;amp;w&amp;amp;&amp;amp;w[m]&amp;amp;&amp;amp;!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m](&quot;DOMContentLoaded&quot;,i,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,o),d[v](&quot;onload&quot;,r)),f(&quot;mark&quot;,[&quot;firstbyte&quot;,u],null,&quot;api&quot;);var E=0,O=e(5)},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;<br>    &lt;title&gt;BlazeDemo - reserve&lt;/title&gt;<br>    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;/&gt;<br>    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;/&gt;<br>    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;/&gt;<br>    &lt;script src=&quot;/assets/bootstrap.min.js&quot;/&gt;<br>    &lt;script src=&quot;/assets/bootstrap-table.js&quot;/&gt;<br>    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;<br>    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;<br>    &lt;style type=&quot;text/css&quot;&gt;<br>        body {<br>            background: #f5f5f5);<br>        }<br><br>        .hero-unit {<br>            background-color: #fff;<br>        }<br><br>        .center {<br>            display: block;<br>            margin: 0 auto;<br>        }<br>    &lt;/style&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;div class=&quot;navbar navbar-inverse&quot;&gt;<br>      &lt;div class=&quot;navbar-inner&quot;&gt;<br>        &lt;div class=&quot;container&quot;&gt;<br>          &lt;a shape=&quot;rect&quot; class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;<br>            &lt;span class=&quot;icon-bar&quot;/&gt;<br>            &lt;span class=&quot;icon-bar&quot;/&gt;<br>            &lt;span class=&quot;icon-bar&quot;/&gt;<br>          &lt;/a&gt;<br>          &lt;a shape=&quot;rect&quot; class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;<br>          &lt;a shape=&quot;rect&quot; class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;<br>        &lt;/div&gt;<br>      &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;div class=&quot;container&quot;&gt;<br>      &lt;h3&gt;Flights from Paris to Buenos Aires: &lt;/h3&gt;<br>      &lt;table class=&quot;table&quot;&gt;<br>        &lt;thead&gt;<br>          &lt;tr&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Choose&lt;/th&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Flight #&lt;/th&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Airline&lt;/th&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Departs: Paris&lt;/th&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Arrives: Buenos Aires&lt;/th&gt;<br>            &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Price&lt;/th&gt;<br>          &lt;/tr&gt;<br>        &lt;/thead&gt;<br>        &lt;tbody&gt;<br>          &lt;tr&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; name=&quot;VA43&quot; action=&quot;purchase.php&quot;&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;<br>                &lt;input type=&quot;submit&quot; class=&quot;btn btn-small&quot; value=&quot;Choose This Flight&quot;/&gt;<br>              &lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;43&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Virgin America&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;1:43 AM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;9:45 PM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;$472.56&lt;/td&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;43&quot; name=&quot;flight&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;472.56&quot; name=&quot;price&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;Virgin America&quot; name=&quot;airline&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>            &lt;/form&gt;<br>          &lt;/tr&gt;<br>          &lt;tr&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; name=&quot;UA234&quot; action=&quot;purchase.php&quot;&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;<br>                &lt;input type=&quot;submit&quot; class=&quot;btn btn-small&quot; value=&quot;Choose This Flight&quot;/&gt;<br>              &lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;234&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;United Airlines&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;7:43 AM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;10:45 PM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;$432.98&lt;/td&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;234&quot; name=&quot;flight&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;432.98&quot; name=&quot;price&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;United Airlines&quot; name=&quot;airline&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>            &lt;/form&gt;<br>          &lt;/tr&gt;<br>          &lt;tr&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; name=&quot;AL969&quot; action=&quot;purchase.php&quot;&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;<br>                &lt;input type=&quot;submit&quot; class=&quot;btn btn-small&quot; value=&quot;Choose This Flight&quot;/&gt;<br>              &lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;9696&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Aer Lingus&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;5:27 AM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;8:22 PM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;$200.98&lt;/td&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;9696&quot; name=&quot;flight&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;200.98&quot; name=&quot;price&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;Aer Lingus&quot; name=&quot;airline&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>            &lt;/form&gt;<br>          &lt;/tr&gt;<br>          &lt;tr&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; name=&quot;VA12&quot; action=&quot;purchase.php&quot;&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;<br>                &lt;input type=&quot;submit&quot; class=&quot;btn btn-small&quot; value=&quot;Choose This Flight&quot;/&gt;<br>              &lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;12&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Virgin America&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;11:23 AM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;1:45 PM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;$765.32&lt;/td&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;12&quot; name=&quot;flight&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;765.32&quot; name=&quot;price&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;Virgin America&quot; name=&quot;airline&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>            &lt;/form&gt;<br>          &lt;/tr&gt;<br>          &lt;tr&gt;<br>            &lt;form enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;post&quot; name=&quot;L4346&quot; action=&quot;purchase.php&quot;&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;<br>                &lt;input type=&quot;submit&quot; class=&quot;btn btn-small&quot; value=&quot;Choose This Flight&quot;/&gt;<br>              &lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;4346&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Lufthansa&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;1:45 AM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;8:34 PM&lt;/td&gt;<br>              &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;$233.98&lt;/td&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;4346&quot; name=&quot;flight&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;233.98&quot; name=&quot;price&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; value=&quot;Lufthansa&quot; name=&quot;airline&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>              &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>            &lt;/form&gt;<br>          &lt;/tr&gt;<br>        &lt;/tbody&gt;<br>      &lt;/table&gt;<br>      &lt;input type=&quot;hidden&quot; name=&quot;fromPort&quot; value=&quot;Paris&quot;/&gt;<br>      &lt;input type=&quot;hidden&quot; name=&quot;toPort&quot; value=&quot;Buenos Aires&quot;/&gt;<br>    &lt;/div&gt;<br>    &lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSkQARVBET1UZEgsV&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:12,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    </span>
+                            </span>
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td colspan="2"></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>4.68s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div id="beforefooter"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="version">Serenity BDD version 2.0.43</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            }
+            else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</body>
+</html>
