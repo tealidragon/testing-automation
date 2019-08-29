@@ -1,13 +1,8 @@
-@Library('ostk-pipeline')
-import java.lang.Object
+#!groovy
 
-def areDeploying = env.BRANCH_NAME == 'master'
-
-installWebhooks(scm)
 node {
     stage('Git checkout') { // for display purposes
-        // Checkout code, cleaning the tree first if necessary
-        ostkCheckout()
+        git 'https://git.overstock.com/scm/clubo/earlyaccess-automation-testing.git'
     }
     stage('Smoke') {
         try {
