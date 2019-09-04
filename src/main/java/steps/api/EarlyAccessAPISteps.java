@@ -1,11 +1,7 @@
 package steps.api;
 
-import com.overstock.clubo.common.enums.ServiceEnum;
-import com.overstock.clubo.common.util.COUtils;
 import com.overstock.model.Id;
-import com.overstock.model.ids.CustomerId;
 import com.overstock.model.ids.ProductId;
-import com.sun.tools.javac.code.Attribute;
 import net.thucydides.core.annotations.Step;
 
 import javax.json.Json;

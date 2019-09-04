@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="db.EarlyAccessDbTest" skipped="0" tests="1" time="1.11" timestamp="2019-08-29 10:18:37"><testcase classname="db.EarlyAccessDbTest" name="Verify early access DB"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="db.EarlyAccessDbTest" skipped="0" tests="1" time="1.17" timestamp="2019-08-29 04:30:00"><testcase classname="db.EarlyAccessDbTest" name="Verify early access DB"/></testsuite>
