@@ -6,8 +6,8 @@ import net.thucydides.core.annotations.Step;
 
 import javax.json.Json;
 import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
+import javax.json.JsonValue;
 import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
@@ -70,36 +70,18 @@ public class EarlyAccessProductControllerAPISteps {
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusOrExpiry() {
+    public void earlyAccessUpdateProductStatusHappy() {
         String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
-
-        Random rand = new Random();
-        int[] productIds = {9017170,
-                9085987,
-                9086032,
-                9121578,
-                9130935,
-                9136162,
-                9172876,
-                9179161,
-                9401127,
-                9407955,
-                9412897,
-                9421853};
-
-        JsonArrayBuilder productJsonBuilder = Json.createArrayBuilder();
-        for (int productIdInArray : productIds) {
-            productJsonBuilder.add(productIdInArray).build();
-        }
+        int productId = 0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", true)
-                .add("productId", 0)
+                .add("productId", productId)
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
                 .add("earlyAccessProduct", earlyAccessProductInfo)
-                .add("productId", 0)
+                .add("productId", productId)
                 .build();
 
 
@@ -107,9 +89,135 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + 0)
+                .put(earlyAccessURL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
+
+    //PUT (Update)
+    @Step
+    public void earlyAccessUpdateProductStatusIsActiveNull() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        int productId = 0;
+        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+                .add("endDate", "2019-09-06T16:59:25.306Z")
+                .add("isActive", JsonValue.NULL)
+                .add("productId", productId)
+                .add("startDate", "2019-09-06T16:59:25.306Z")
+                .build();
+        JsonObject productUpdateRequest = Json.createObjectBuilder()
+                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("productId", productId)
+                .build();
+
+
+        System.out.println(productUpdateRequest);
+        given().contentType("application/json")
+                .body(productUpdateRequest.toString())
+                .when()
+                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .then().statusCode(200);
+    }
+
+    //PUT (Update)
+    @Step
+    public void earlyAccessUpdateProductStatusStartDateNull() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        int productId = 0;
+        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+                .add("endDate", "2019-09-06T16:59:25.306Z")
+                .add("isActive", true)
+                .add("productId", productId)
+                .add("startDate", JsonValue.NULL)
+                .build();
+        JsonObject productUpdateRequest = Json.createObjectBuilder()
+                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("productId", productId)
+                .build();
+
+
+        System.out.println(productUpdateRequest);
+        given().contentType("application/json")
+                .body(productUpdateRequest.toString())
+                .when()
+                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .then().statusCode(200);
+    }
+
+    //PUT (Update)
+    @Step
+    public void earlyAccessUpdateProductStatusEndDateNull() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        int productId = 0;
+        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+                .add("startDate", "2019-09-06T16:59:25.306Z")
+                .add("isActive", true)
+                .add("productId", productId)
+                .add("endDate", JsonValue.NULL)
+                .build();
+        JsonObject productUpdateRequest = Json.createObjectBuilder()
+                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("productId", productId)
+                .build();
+
+
+        System.out.println(productUpdateRequest);
+        given().contentType("application/json")
+                .body(productUpdateRequest.toString())
+                .when()
+                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .then().statusCode(200);
+    }
+
+    //PUT (Update)
+    @Step
+    public void earlyAccessUpdateProductStatusInvalidProducId() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        int productId = -0;
+        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+                .add("endDate", "2019-09-06T16:59:25.306Z")
+                .add("isActive", false)
+                .add("productId", productId)
+                .add("startDate", "2019-09-06T16:59:25.306Z")
+                .build();
+        JsonObject productUpdateRequest = Json.createObjectBuilder()
+                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("productId", productId)
+                .build();
+
+
+        System.out.println(productUpdateRequest);
+        given().contentType("application/json")
+                .body(productUpdateRequest.toString())
+                .when()
+                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .then().statusCode(200);
+    }
+
+    //PUT (Update)
+    @Step
+    public void earlyAccessUpdateProductStatusNullProducId() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        JsonValue productId = JsonValue.NULL;
+        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+                .add("endDate", "2019-09-06T16:59:25.306Z")
+                .add("isActive", false)
+                .add("productId", productId)
+                .add("startDate", "2019-09-06T16:59:25.306Z")
+                .build();
+        JsonObject productUpdateRequest = Json.createObjectBuilder()
+                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("productId", productId)
+                .build();
+
+
+        System.out.println(productUpdateRequest);
+        given().contentType("application/json")
+                .body(productUpdateRequest.toString())
+                .when()
+                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .then().statusCode(400);
+    }
+
 
     @Step
     public void earlyAccessRetrieveStatus() {

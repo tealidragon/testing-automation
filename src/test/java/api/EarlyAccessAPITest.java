@@ -28,16 +28,49 @@ public class EarlyAccessAPITest {
     public void verifyEarlyAccessStatus() {
         earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcall();
     }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessUpdateProductStatusIsActiveNull() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusIsActiveNull();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessUpdateProductStatusStartDateNull() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusStartDateNull();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessUpdateProductStatusEndDateNull() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusEndDateNull();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessUpdateProductStatusInvalidProducId() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusInvalidProducId();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessUpdateProductStatusNullProducId() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusNullProducId();
+    }
+
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessStatus2() {
         earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcall2();
     }
+
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessStatusNull() {
         earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcallNull();
     }
+
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessStatusNotInt() {
@@ -47,7 +80,7 @@ public class EarlyAccessAPITest {
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessUpdateProductStatusOrExpiry() {
-        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusOrExpiry();
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusHappy();
     }
 
     @Test
