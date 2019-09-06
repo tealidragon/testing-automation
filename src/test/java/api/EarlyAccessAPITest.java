@@ -5,8 +5,8 @@ import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import steps.api.EarlyAccessProductControllerAPISteps;
 import steps.api.EarlyAccessBatchControllerAPISteps;
+import steps.api.EarlyAccessProductControllerAPISteps;
 import steps.api.EarlyAccessProductFeedControllerAPISteps;
 
 import java.io.IOException;
@@ -27,6 +27,21 @@ public class EarlyAccessAPITest {
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessStatus() {
         earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcall();
+    }
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessStatus2() {
+        earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcall2();
+    }
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessStatusNull() {
+        earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcallNull();
+    }
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyEarlyAccessStatusNotInt() {
+        earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcallNotInt();
     }
 
     @Test
@@ -55,7 +70,7 @@ public class EarlyAccessAPITest {
 
     @Test
     @WithTag(type = "type", name = "API")
-    public void verifyProductIdsbatchStatus() throws IOException {
+    public void verifyProductIdsbatchStatus() {
         earlyAccessBatchControllerAPISteps.ea_post_product_batch_status();
     }
 }

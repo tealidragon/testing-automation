@@ -18,12 +18,12 @@ public class EarlyAccessBatchControllerAPISteps {
         Random rand = new Random();
         int productId = rand.nextInt(10000);
 
-        int[] productIds = {rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),
-                rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),
-                rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),
-                rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),
-                rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),
-                rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000),rand.nextInt(10000)};
+        int[] productIds = {rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000),
+                rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000),
+                rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000),
+                rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000),
+                rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000),
+                rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000), rand.nextInt(10000)};
 
         JsonArrayBuilder productJsonBuilder = Json.createArrayBuilder();
         for (int productIdInArray : productIds) {

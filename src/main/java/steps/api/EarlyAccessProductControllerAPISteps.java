@@ -1,27 +1,18 @@
 package steps.api;
 
-import com.overstock.clubo.common.enums.ServiceEnum;
-import com.overstock.clubo.common.util.COUtils;
 import com.overstock.model.Id;
-import com.overstock.model.ids.CustomerId;
 import com.overstock.model.ids.ProductId;
-import com.sun.tools.javac.code.Attribute;
 import net.thucydides.core.annotations.Step;
 
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.isEmptyOrNullString;
 
 public class EarlyAccessProductControllerAPISteps {
 
@@ -33,12 +24,53 @@ public class EarlyAccessProductControllerAPISteps {
         given().param("productId", new Id<ProductId>(9809209))
                 .when()
                 .get(earlyAccessURL + "/early/access/product/" + new Id<ProductId>(9809209))
-                .then().statusCode(200);
+                .then().statusCode(200)
+                .body("productId", is(9809209))
+                .body("isActive", is(false))
+                .body("startDate", isEmptyOrNullString())
+                .body("endDate", isEmptyOrNullString());
+
+    }
+
+    //GET
+    @Step
+    public void earlyAccessStatusAPIcall2() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+
+        given().param("productId", new Id<ProductId>(9809209))
+                .when()
+                .get(earlyAccessURL + "/early/access/product/" + new Id<ProductId>(9809209))
+                .then()
+                .statusCode(200)
+                .body("productId", is(9809209));
+    }
+
+    //GET
+    @Step
+    public void earlyAccessStatusAPIcallNull() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+
+        given().when()
+                .get(earlyAccessURL + "/early/access/product/")
+                .then()
+                .statusCode(404);
+    }
+
+    //GET
+    @Step
+    public void earlyAccessStatusAPIcallNotInt() {
+        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+
+        given().param("productId", "abc123")
+                .when()
+                .get(earlyAccessURL + "/early/access/product/abc123")
+                .then()
+                .statusCode(400);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusOrExpiry(){
+    public void earlyAccessUpdateProductStatusOrExpiry() {
         String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
 
         Random rand = new Random();

@@ -9,4 +9,9 @@ scenarios:
   basic-performance-test:
     think-time: 0.75
     requests:
-    - http://cluboservice-cluboautomation.test.overstock.com:20620/clubo/v1/info/127524034/newsletter?x-api-key=x-api-key&auth-context=a&rewardsPageSize=10
+    - http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/9809209
+    - http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/0
+    - url: http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/batch/status
+      body:
+        productIds: [2332,6688,1769,2841,6832,6526,9844,3105,2942,3750,7135,5911,8768,742,7612,4384,6794,9048,5437]
+      method: POST

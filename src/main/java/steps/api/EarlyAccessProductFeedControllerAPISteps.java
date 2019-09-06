@@ -1,19 +1,9 @@
 package steps.api;
 
-import com.overstock.model.Id;
-import com.overstock.model.ids.ProductId;
 import net.thucydides.core.annotations.Step;
 
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.Date;
 import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
@@ -67,7 +57,6 @@ public class EarlyAccessProductFeedControllerAPISteps {
         }
 
     }
-
 
 
 }
