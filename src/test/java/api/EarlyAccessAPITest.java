@@ -5,7 +5,9 @@ import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import steps.api.EarlyAccessAPISteps;
+import steps.api.EarlyAccessProductControllerAPISteps;
+import steps.api.EarlyAccessBatchControllerAPISteps;
+import steps.api.EarlyAccessProductFeedControllerAPISteps;
 
 import java.io.IOException;
 
@@ -13,35 +15,47 @@ import java.io.IOException;
 public class EarlyAccessAPITest {
 
     @Steps
-    EarlyAccessAPISteps earlyAccessAPISteps;
+    EarlyAccessProductControllerAPISteps earlyAccessProductControllerAPISteps;
+
+    @Steps
+    EarlyAccessBatchControllerAPISteps earlyAccessBatchControllerAPISteps;
+
+    @Steps
+    EarlyAccessProductFeedControllerAPISteps earlyAccessProductFeedControllerAPISteps;
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessStatus() {
-        earlyAccessAPISteps.earlyAccessStatusAPIcall();
+        earlyAccessProductControllerAPISteps.earlyAccessStatusAPIcall();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
-    public void verifyCreateEarlyAccess() {
-        earlyAccessAPISteps.earlyAccessCreateAPIcall();
-    }
-
-    @Test
-    @WithTag(type = "type", name = "API")
-    public void verifyCreateEarlyAccessNotActive() {
-        earlyAccessAPISteps.earlyAccessCreateAPIcallNotActiveStatus();
+    public void verifyEarlyAccessUpdateProductStatusOrExpiry() {
+        earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusOrExpiry();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyRetrieveBatchEarlyAccessStatus() {
-        earlyAccessAPISteps.earlyAccessRetrieveStatus();
+        earlyAccessProductControllerAPISteps.earlyAccessRetrieveStatus();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyProductIdsUploadAPI() throws IOException {
-        earlyAccessAPISteps.earlyAccessFileUpload();
+        earlyAccessProductFeedControllerAPISteps.earlyAccessFileUpload();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyProductIdsUploadUpdateAPI() throws IOException {
+        earlyAccessProductFeedControllerAPISteps.earlyAccessFileUploadUpdate();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyProductIdsbatchStatus() throws IOException {
+        earlyAccessBatchControllerAPISteps.ea_post_product_batch_status();
     }
 }

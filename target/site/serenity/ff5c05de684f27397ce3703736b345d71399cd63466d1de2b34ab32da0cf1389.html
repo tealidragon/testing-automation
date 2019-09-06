@@ -94,7 +94,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-08-2019 10:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-09-2019 10:45</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -134,9 +134,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="failing-color">
                                     Verify create early access not active
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -173,12 +173,12 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
                     <td width="50" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 failure-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -194,9 +194,47 @@
                             </span>
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.04s</span></td>
+                    <td width="100"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">0.28s</span></td>
                 </tr>
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">java.lang.AssertionError: 1 expectation failed.<br>Expected status code &lt;200&gt; but was &lt;404&gt;.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-1""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:656)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)<br />io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)<br />steps.api.EarlyAccessProductControllerAPISteps.earlyAccessCreateAPIcallNotActiveStatus(EarlyAccessProductControllerAPISteps.java:101)<br />api.EarlyAccessAPITest.verifyCreateEarlyAccessNotActive(EarlyAccessAPITest.java:37)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    </td>
+                    </tr>
                     <tr>
                     <td colspan="5">
                     <table id="stepSection0" style="display:none; width:100%">
@@ -226,16 +264,16 @@
                         <div class="card">
                             <div class="card-body">
                                         <h4>Response</h4>
-                                            <p>Status code: 200</p>
+                                            <p>Status code: 404</p>
                                             <p>Content Type: application/json</p>
                                             <h4>Request Headers</h4>
                                             <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                             <h4>Content Body</h4>
-                                            <pre>{<br>    &quot;earlyAccessProductDtos&quot;: [<br>        {<br>            &quot;endDate&quot;: &quot;2019-08-29T10:18:39.524&quot;,<br>            &quot;productId&quot;: 819,<br>            &quot;startDate&quot;: &quot;2019-08-19T10:18:39.523&quot;<br>        }<br>    ]<br>}</pre>
+                                            <pre>{<br>    &quot;earlyAccessProductDtos&quot;: [<br>        {<br>            &quot;endDate&quot;: &quot;2019-09-06T10:45:54.432&quot;,<br>            &quot;productId&quot;: 4497,<br>            &quot;startDate&quot;: &quot;2019-08-27T10:45:54.432&quot;<br>        }<br>    ]<br>}</pre>
                                             <h4>Response Headers</h4>
-                                            <pre>Content-Length: 0<br>Date: Thu, 29 Aug 2019 16:18:39 GMT</pre>
+                                            <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Fri, 06 Sep 2019 16:45:54 GMT</pre>
                                         <h4>Response Body</h4>
-                                            <pre></pre>
+                                            <pre>{<br>    &quot;timestamp&quot;: &quot;2019-09-06T16:45:54.667+0000&quot;,<br>    &quot;status&quot;: 404,<br>    &quot;error&quot;: &quot;Not Found&quot;,<br>    &quot;message&quot;: &quot;No message available&quot;,<br>    &quot;path&quot;: &quot;/early/access/product/batch/create&quot;<br>}</pre>
                             </div>
                         </div>
                     </div>
@@ -251,10 +289,10 @@
                     </table>
                     </td>
                     <tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
                     <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.04s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.3s</em></span></td>
                 </tr>
 
             </table>
