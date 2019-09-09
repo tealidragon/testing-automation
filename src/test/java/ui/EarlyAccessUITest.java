@@ -2,6 +2,7 @@ package ui;
 
 import com.overstock.arch.automation.WebDriverProvider;
 import com.overstock.clubo.common.TestBase;
+import com.overstock.clubo.common.client.ClubOServiceTestingClient;
 import com.overstock.clubo.common.util.COUtils;
 import com.overstock.framework.Bordello;
 import net.thucydides.core.annotations.Managed;
@@ -12,12 +13,16 @@ import org.openqa.selenium.WebDriver;
 import steps.ui.UISteps;
 
 public class EarlyAccessUITest extends TestBase {
-    static {
-        COUtils.init(true);
-    }
 
-    @Managed
-    WebDriver driver;
+//    private static ClubOServiceTestingClient CLIENT;
+//
+//    static {
+//        COUtils.init(true);
+//        CLIENT = COUtils.getCOWS_CLIENT();
+//    }
+
+//    @Managed
+//    WebDriver driver;
 
     @Steps
     UISteps uiSteps;
@@ -25,7 +30,7 @@ public class EarlyAccessUITest extends TestBase {
     @Test
     @WithTag(type = "type", name = "UI")
     public void findFlights() {
-        driver = Bordello.get(WebDriverProvider.class).driver();
+
         uiSteps.goToHomePage();
     }
 }

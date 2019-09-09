@@ -1,0 +1,72 @@
+webdriver.base.url=http://overstock.com/
+
+webdriver.remote.url=http://http://test-master.auto.test.ostk.com:39999/wd/hub
+webdriver.remote.driver=chrome
+webdriver.remote.port=39999
+
+
+webdriver.driver=chrome
+
+#webdriver.remote.driver=chrome
+#webdriver.remote.os=WINDOWS
+
+webdriver.remote.timeouts.implicitlywait=10000
+webdriver.remote.wait.for.timeout=10000
+
+
+#vip=cluboautomation.test
+#grid=false
+#serviceName=SHP_W7OPJLQ2
+#sun.net.spi.nameservice.provider.1=dns,ostk
+#ostk.browser=chrome
+
+
+
+
+# Define the default driver
+#webdriver.driver=phantomjs
+
+# Appears at the top of the reports
+#serenity.project.name = Sales Manager Web Automation Suite
+
+# Root package for any JUnit acceptance tests
+#serenity.test.root=net.thucydides.showcase.junit.features
+
+# Customize your requirements hierarchy
+# serenity.requirement.types=feature, story
+
+# Run the tests without calling webdriver - useful to check your Cucumber wiring
+#serenity.dry.run=true
+
+# Customise browser size
+#serenity.browser.height = 1200
+#serenity.browser.width = 1200
+
+
+
+chrome.switches = --no-sandbox
+
+#webdriver.remote.url=http://localhost:4444/wd/hub
+#webdriver.remote.driver = chrome
+webdriver.driver = provided
+webdriver.provided.type = mydriver
+webdriver.provided.mydriver = com.serenity.maven.customdrivers.CustomRemoteChromeDriver
+serenity.driver.capabilities = mydriver
+
+serenity.verbose.steps = true
+restart.browser.each.scenario = true
+
+serenity.logging = VERBOSE
+
+webdriver.timeouts.implicitlywait = 6000
+
+serenity.reports.show.step.details = true
+serenity.report.show.manual.tests = true
+
+serenity.issue.tracker.url = https://jira.xxx.com/browse/{0}
+
+show.related.tags=true
+
+serenity.console.colors = true
+
+serenity.requirement.types=theme, epic, feature

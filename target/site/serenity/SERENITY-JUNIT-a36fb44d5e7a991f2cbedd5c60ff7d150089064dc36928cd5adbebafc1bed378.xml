@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="smoke.EarlyAccessSmokeAPITest" skipped="0" tests="1" time="3.6" timestamp="2019-08-29 04:29:42"><testcase classname="smoke.EarlyAccessSmokeAPITest" name="Verify early access health with API"/></testsuite>
