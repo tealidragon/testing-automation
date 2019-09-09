@@ -1,7 +1,9 @@
 package ui;
 
+import com.overstock.arch.automation.WebDriverProvider;
 import com.overstock.clubo.common.TestBase;
 import com.overstock.clubo.common.util.COUtils;
+import com.overstock.framework.Bordello;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
@@ -22,5 +24,8 @@ public class EarlyAccessUITest extends TestBase {
 
     @Test
     @WithTag(type = "type", name = "UI")
-    public void findFlights() {uiSteps.goToHomePage();}
+    public void findFlights() {
+        driver = Bordello.get(WebDriverProvider.class).driver();
+        uiSteps.goToHomePage();
+    }
 }
