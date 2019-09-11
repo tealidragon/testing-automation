@@ -1,17 +1,14 @@
 package pages;
 
-import com.overstock.webdev.test.page.ostk.ShoppingSiteBasePage;
-import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends PageObject {
 
-    ShoppingSiteBasePage shoppingSiteBasePage;
-
-    @FindBy(xpath = "//input[contains(@value,'Find Flights')]")
-    public WebElement findFlightsButton;
+    @FindBy(id = "sitewide-lightbox-container")
+    WebElement sitewideLightbox;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -19,6 +16,6 @@ public class HomePage extends PageObject {
     }
 
     public void findFlights() {
-        findFlightsButton.click();
+        sitewideLightbox.isDisplayed();
     }
 }

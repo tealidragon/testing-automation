@@ -13,7 +13,7 @@ public class EarlyAccessSmokeAPITest {
     EarlyAccessHealthAPISteps earlyAccessHealthAPISteps;
 
     @Test
-    @WithTag(type="type", name="Smoke")
+    @WithTag(type = "type", name = "Smoke")
     public void verifyEarlyAccessHealthWithAPI() {
         earlyAccessHealthAPISteps.verifyThatAppIsRunning();
     }

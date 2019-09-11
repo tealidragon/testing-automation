@@ -5,19 +5,17 @@ import java.util.Properties;
 class BaseConfiguration {
     private Properties configFile;
 
-    BaseConfiguration()
-    {
+    BaseConfiguration() {
         configFile = new Properties();
 
         try {
             configFile.load(this.getClass().getClassLoader().getResourceAsStream("base.properties"));
-        } catch(Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    String getProperty(String key)
-    {
+    String getProperty(String key) {
         return this.configFile.getProperty(key);
     }
 }

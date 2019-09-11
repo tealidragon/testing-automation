@@ -7,5 +7,7 @@ public class UISteps {
     public HomePage homePage;
 
     @Step
-    public void goToHomePage() {homePage.findFlights();}
+    public void goToHomePage() {
+        homePage.findFlights();
+    }
 }
