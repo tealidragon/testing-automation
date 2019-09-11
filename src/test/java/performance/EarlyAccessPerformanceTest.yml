@@ -1,6 +1,9 @@
 ---
+settings:
+  app.host: 10.17.5.5
+
 execution:
-- concurrency: 10
+- concurrency: 5
   ramp-up: 1m
   hold-for: 1m30s
   scenario: basic-performance-test
@@ -9,9 +12,5 @@ scenarios:
   basic-performance-test:
     think-time: 0.75
     requests:
-    - http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/9809209
-    - http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/0
-    - url: http://earlyaccess.cluboautomation.test.ostk.com:8080/early/access/product/batch/status
-      body:
-        productIds: [2332,6688,1769,2841,6832,6526,9844,3105,2942,3750,7135,5911,8768,742,7612,4384,6794,9048,5437]
-      method: POST
+    - https://${app.host}/v2/club-o-rewards-program
+    - https://${app.host}/club-o-rewards-program

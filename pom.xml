@@ -26,6 +26,10 @@
         <java.version>1.8</java.version>
         <serenity.maven.version>1.5.8</serenity.maven.version>
         <serenity.cucumber.version>1.0.15</serenity.cucumber.version>
+
+        <!-- Overstock Properties-->
+        <webdb.version>3.0</webdb.version>
+
         <!-- "Settings for custom drivers, local run - Serenity - Local profile"-->
 <!--        <webdriver.driver>provided</webdriver.driver>-->
 <!--        <webdriver.provided.type>mydriver</webdriver.provided.type>-->
@@ -66,8 +70,7 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-
-        <!--  Club O    -->
+        <!--   Overstock    -->
         <dependency>
             <groupId>com.overstock.clubo</groupId>
             <artifactId>ClubOCommon</artifactId>
@@ -95,7 +98,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>com.overstock.clubo</groupId>
             <artifactId>ClubOServiceTesting-Common</artifactId>
@@ -148,6 +150,117 @@
                 <exclusion>
                     <groupId>com.oracle.jdbc</groupId>
                     <artifactId>ons</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.util</groupId>
+            <artifactId>RemoteExecuteUtil</artifactId>
+            <version>1.5-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock</groupId>
+            <artifactId>CustomerModel</artifactId>
+            <version>3.16</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.overstock.xps</groupId>
+                    <artifactId>XPS-creditcard-client</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>DiscountService-bind</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>WebDb</artifactId>
+            <version>${webdb.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jsr305</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>WebDbTestUtils</artifactId>
+            <version>${webdb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev.test</groupId>
+            <artifactId>ShoppingSitePages</artifactId>
+            <version>trunk-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>selenium-htmlunit-driver</artifactId>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>htmlunit-driver</artifactId>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>selenide</artifactId>
+                    <groupId>com.codeborne</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>ReviewsApi-client</artifactId>
+            <version>1.64</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jvnet.mimepull</groupId>
+                    <artifactId>mimepull</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>manifestable-annotation-reader</artifactId>
+            <version>1.9</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>manifestable-annotation</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>JavaFramework</artifactId>
+            <version>5.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-1.2-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>annotations</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>JavaFrameworkTestUtils</artifactId>
+            <version>5.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-1.2-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>

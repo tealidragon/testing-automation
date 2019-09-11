@@ -9,10 +9,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CustomRemoteChromeDriver implements DriverSource {
 
-    static {
-        COUtils.init(true);
-    }
-
+//    static {
+//        COUtils.init(true);
+//    }
+//
     @Override
     public WebDriver newDriver() {
         final ChromeOptions chromeOptions = new ChromeOptions();
