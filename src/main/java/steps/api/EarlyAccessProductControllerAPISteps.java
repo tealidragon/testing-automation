@@ -12,7 +12,7 @@ import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.isEmptyOrNullString;
+import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 
 public class EarlyAccessProductControllerAPISteps {
 
