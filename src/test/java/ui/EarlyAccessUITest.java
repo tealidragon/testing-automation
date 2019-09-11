@@ -1,28 +1,33 @@
 package ui;
 
-import com.overstock.arch.automation.WebDriverProvider;
-import com.overstock.clubo.common.TestBase;
-import com.overstock.clubo.common.client.ClubOServiceTestingClient;
-import com.overstock.clubo.common.util.COUtils;
-import com.overstock.framework.Bordello;
+import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
+import net.thucydides.core.annotations.WithTags;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+import pages.HomePage;
 import steps.ui.UISteps;
 
-public class EarlyAccessUITest extends TestBase {
+@RunWith(SerenityRunner.class)
+@WithTags({
+        @WithTag("type:UI"),
+        @WithTag("pattern:Screenplay")
+})
+public class EarlyAccessUITest {
 
-//    private static ClubOServiceTestingClient CLIENT;
-//
 //    static {
 //        COUtils.init(true);
-//        CLIENT = COUtils.getCOWS_CLIENT();
 //    }
 
-//    @Managed
-//    WebDriver driver;
+
+    @Managed
+    WebDriver driver;
+
+    @Managed
+    HomePage homePage;
 
     @Steps
     UISteps uiSteps;
