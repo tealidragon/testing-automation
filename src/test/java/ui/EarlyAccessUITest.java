@@ -18,11 +18,6 @@ import steps.ui.UISteps;
 })
 public class EarlyAccessUITest {
 
-//    static {
-//        COUtils.init(true);
-//    }
-
-
     @Managed
     WebDriver driver;
 
@@ -34,7 +29,7 @@ public class EarlyAccessUITest {
 
     @Test
     @WithTag(type = "type", name = "UI")
-    public void findFlights() {
+    public void findSiteWideLightboxOnHomePage() {
 
         uiSteps.goToHomePage();
     }

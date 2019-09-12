@@ -24,7 +24,7 @@ public class AutoDownloadedWebDriver implements DriverSource {
 
         switch (browserType) {
             case CHROME:
-                ChromeDriverManager.getInstance().setup();
+                ChromeDriverManager.getInstance().version("77").setup();
                 return new ChromeDriver();
 
             case CHROME_HEADLESS:

@@ -20,10 +20,12 @@
         <serenity.cucumber.version>1.9.39</serenity.cucumber.version>
         <serenity.maven.version>1.0.6</serenity.maven.version>
         <serenity.screenplay.version>1.1.26</serenity.screenplay.version>
+        <junit.version>4.12</junit.version>
         <maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
         <maven.compiler.plugin>3.2</maven.compiler.plugin>
         <maven.surfire.plugin>2.20.1</maven.surfire.plugin>
         <java.version>1.8</java.version>
+        <joda.time.version>2.10</joda.time.version>
         <!-- WebDriver -->
         <webdriver.driver>chrome</webdriver.driver>
         <webdriver.manager.version>1.7.2</webdriver.manager.version>
@@ -32,12 +34,32 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda.time.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>annotations</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
         <!-- serenity (must be first or tests won't run) -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
             <version>${serenity.version}</version>
             <exclusions>
+                <exclusion>
+                    <artifactId>gherkin</artifactId>
+                    <groupId>info.cukes</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>cucumber-core</artifactId>
+                    <groupId>info.cukes</groupId>
+                </exclusion>
                 <exclusion>
                     <artifactId>snakeyaml</artifactId>
                     <groupId>org.yaml</groupId>
@@ -48,21 +70,47 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
             <version>${serenity.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>cucumber-core</artifactId>
+                    <groupId>info.cukes</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-rest-assured</artifactId>
             <version>${serenity.version}</version>
+            <exclusions>
+
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdriver.manager.version}</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
             <version>${serenity.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>cucumber-core</artifactId>
+                    <groupId>info.cukes</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay-webdriver</artifactId>
             <version>${serenity.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>cucumber-core</artifactId>
+                    <groupId>info.cukes</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -70,45 +118,51 @@
             <version>${serenity.cucumber.version}</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>cglib</artifactId>
-                    <groupId>cglib</groupId>
+                    <artifactId>gherkin</artifactId>
+                    <groupId>io.cucumber</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <!-- webdriver manager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdriver.manager.version}</version>
-        </dependency>
-        <!-- overstock arch -->
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>manifestable-annotation-reader</artifactId>
-            <version>1.9</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>annotations</artifactId>
-                    <groupId>com.google.code.findbugs</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>manifestable-annotation</artifactId>
-            <version>1.9</version>
         </dependency>
         <!-- overstock webdev -->
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-beanutils</groupId>
+                    <artifactId>commons-beanutils</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>value-types</artifactId>
+            <version>2.0</version>
+        </dependency>
         <dependency>
             <groupId>com.overstock.webdev.test</groupId>
             <artifactId>DBUtils</artifactId>
             <version>trunk-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>cglib-nodep</artifactId>
+                    <groupId>cglib</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.overstock.webdev</groupId>
             <artifactId>WebDb</artifactId>
             <version>${webdb.version}</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>aspectjrt</artifactId>
+                    <groupId>org.aspectj</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.overstock.webdev</groupId>
@@ -180,6 +234,32 @@
             <artifactId>javax.json</artifactId>
             <version>1.0</version>
         </dependency>
+        <!-- Used (undeclared) warnings -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -195,6 +275,18 @@
             </testResource>
         </testResources>
         <plugins>
+            <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <configuration>
+                    <rules>
+                        <banDuplicateClasses>
+                            <ignoreClasses>
+                                <ignoreClass>javax.servlet.*</ignoreClass>
+                            </ignoreClasses>
+                        </banDuplicateClasses>
+                    </rules>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
