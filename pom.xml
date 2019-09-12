@@ -64,6 +64,10 @@
                     <artifactId>snakeyaml</artifactId>
                     <groupId>org.yaml</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>commons-beanutils</artifactId>
+                    <groupId>commons-beanutils</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -82,7 +86,6 @@
             <artifactId>serenity-rest-assured</artifactId>
             <version>${serenity.version}</version>
             <exclusions>
-
             </exclusions>
         </dependency>
         <dependency>
@@ -121,26 +124,28 @@
                     <artifactId>gherkin</artifactId>
                     <groupId>io.cucumber</groupId>
                 </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- overstock webdev -->
-
-        <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>3.2.2</version>
-            <exclusions>
                 <exclusion>
-                    <groupId>commons-beanutils</groupId>
-                    <artifactId>commons-beanutils</artifactId>
+                    <artifactId>cucumber-core</artifactId>
+                    <groupId>io.cucumber</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>value-types</artifactId>
-            <version>2.0</version>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>4.1.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-beanutils</artifactId>
+                    <groupId>commons-beanutils</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>cglib-nodep</artifactId>
+                    <groupId>cglib</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <!-- overstock webdev -->
         <dependency>
             <groupId>com.overstock.webdev.test</groupId>
             <artifactId>DBUtils</artifactId>
@@ -214,6 +219,14 @@
                     <artifactId>annotations</artifactId>
                     <groupId>com.google.code.findbugs</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>commons-beanutils</artifactId>
+                    <groupId>commons-beanutils</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>InventoryManagement-common-internal</artifactId>
+                    <groupId>com.overstock</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!-- Postgres Db Driver -->
@@ -221,12 +234,6 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
-        <dependency>
-            <groupId>javax.json</groupId>
-            <artifactId>javax.json-api</artifactId>
-            <version>1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
         <dependency>
