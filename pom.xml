@@ -17,30 +17,22 @@
 
     <properties>
         <serenity.version>1.6.3</serenity.version>
-        <serenity.cucumber.version>1.0.15</serenity.cucumber.version>
-        <junit.version>4.12</junit.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <serenity.cucumber.version>1.9.39</serenity.cucumber.version>
+        <serenity.maven.version>1.0.6</serenity.maven.version>
+        <serenity.screenplay.version>1.1.26</serenity.screenplay.version>
         <maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
         <maven.compiler.plugin>3.2</maven.compiler.plugin>
         <maven.surfire.plugin>2.20.1</maven.surfire.plugin>
-
         <java.version>1.8</java.version>
-        <serenity.maven.version>1.5.8</serenity.maven.version>
-        <serenity.screenplay.version>1.1.26</serenity.screenplay.version>
+        <!-- WebDriver -->
         <webdriver.driver>chrome</webdriver.driver>
         <webdriver.manager.version>1.7.2</webdriver.manager.version>
-        <assertj.version>3.8.0</assertj.version>
-
         <!-- Overstock Properties-->
         <webdb.version>3.0</webdb.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
+        <!-- serenity (must be first or tests won't run) -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
@@ -63,16 +55,6 @@
             <version>${serenity.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdriver.manager.version}</version>
-        </dependency>
-        <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
             <version>${serenity.version}</version>
@@ -93,13 +75,46 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- webdriver manager -->
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdriver.manager.version}</version>
         </dependency>
-
-        <!--   Overstock    -->
+        <!-- overstock arch -->
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>manifestable-annotation-reader</artifactId>
+            <version>1.9</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>annotations</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.arch</groupId>
+            <artifactId>manifestable-annotation</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <!-- overstock webdev -->
+        <dependency>
+            <groupId>com.overstock.webdev.test</groupId>
+            <artifactId>DBUtils</artifactId>
+            <version>trunk-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>WebDb</artifactId>
+            <version>${webdb.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.overstock.webdev</groupId>
+            <artifactId>WebDbTestUtils</artifactId>
+            <version>${webdb.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.overstock.webdev.test</groupId>
             <artifactId>ShoppingSitePages</artifactId>
@@ -119,11 +134,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.overstock.clubo</groupId>
-            <artifactId>ClubOCommon</artifactId>
-            <version>1.53.2</version>
-        </dependency>
+        <!-- club o -->
         <dependency>
             <groupId>com.overstock.clubo</groupId>
             <artifactId>ClubOServiceTesting-Common</artifactId>
@@ -151,98 +162,24 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.overstock.util</groupId>
-            <artifactId>RemoteExecuteUtil</artifactId>
-            <version>1.5-SNAPSHOT</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock</groupId>
-            <artifactId>CustomerModel</artifactId>
-            <version>3.16</version>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.webdev</groupId>
-            <artifactId>DiscountService-bind</artifactId>
-            <version>5.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.webdev</groupId>
-            <artifactId>WebDb</artifactId>
-            <version>${webdb.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.webdev</groupId>
-            <artifactId>WebDbTestUtils</artifactId>
-            <version>${webdb.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>manifestable-annotation-reader</artifactId>
-            <version>1.9</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>annotations</artifactId>
-                    <groupId>com.google.code.findbugs</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>manifestable-annotation</artifactId>
-            <version>1.9</version>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>JavaFramework</artifactId>
-            <version>5.5</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>annotations</artifactId>
-                    <groupId>com.google.code.findbugs</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.arch</groupId>
-            <artifactId>JavaFrameworkTestUtils</artifactId>
-            <version>5.5</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>cglib-nodep</artifactId>
-                    <groupId>cglib</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.overstock.webdev.test</groupId>
-            <artifactId>DBUtils</artifactId>
-            <version>trunk-SNAPSHOT</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
-        <dependency>
-            <groupId>javax.json</groupId>
-            <artifactId>javax.json-api</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
-            <version>1.0</version>
-        </dependency>
-
         <!-- Postgres Db Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
