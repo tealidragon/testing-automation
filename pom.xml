@@ -25,7 +25,7 @@
         <maven.compiler.plugin>3.2</maven.compiler.plugin>
         <maven.surfire.plugin>2.20.1</maven.surfire.plugin>
         <java.version>1.8</java.version>
-        <joda.time.version>2.10</joda.time.version>
+        <joda.time.version>2.0</joda.time.version>
         <!-- WebDriver -->
         <webdriver.driver>chrome</webdriver.driver>
         <webdriver.manager.version>1.7.2</webdriver.manager.version>
@@ -35,11 +35,11 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>${joda.time.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>joda-time</groupId>-->
+<!--            <artifactId>joda-time</artifactId>-->
+<!--            <version>${joda.time.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>annotations</artifactId>
@@ -71,6 +71,10 @@
                 <exclusion>
                     <artifactId>jcip-annotations</artifactId>
                     <groupId>net.jcip</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jsr305</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -149,13 +153,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jruby/jruby-complete -->
-        <dependency>
-            <groupId>org.jruby</groupId>
-            <artifactId>jruby-complete</artifactId>
-            <version>9.1.17.0</version>
-        </dependency>
-
         <!-- overstock webdev -->
         <dependency>
             <groupId>com.overstock.webdev.test</groupId>
@@ -169,6 +166,10 @@
                 <exclusion>
                     <artifactId>jaxb-api</artifactId>
                     <groupId>jaxb</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-1.2-api</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -249,6 +250,14 @@
                 <exclusion>
                     <artifactId>taxonomyModel</artifactId>
                     <groupId>com.overstock.webdev</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>ant-launcher</artifactId>
+                    <groupId>org.apache.ant</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-api</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
