@@ -346,6 +346,10 @@
                             <ignoreClasses>
                                 <ignoreClass>javax.servlet.*</ignoreClass>
                                 <ignoreClass>org.joda.*</ignoreClass>
+                                <ignoreClass>org.apache.xmlbeans.xml.stream.*</ignoreClass>
+                                <ignoreClass>org.openqa.selenium.*</ignoreClass>
+                                <ignoreClass>org.xmlpull.v1.*</ignoreClass>
+                                <ignoreClass>org.apache.tools.ant.ExitException</ignoreClass>
                             </ignoreClasses>
                         </banDuplicateClasses>
                     </rules>
