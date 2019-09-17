@@ -361,6 +361,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surfire.plugin}</version>
                 <configuration>
+                    <groups>tags</groups>
                     <skip>true</skip>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -389,13 +390,6 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
             </plugin>
             <plugin>
