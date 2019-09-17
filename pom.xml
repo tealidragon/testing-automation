@@ -350,6 +350,7 @@
                                 <ignoreClass>org.openqa.selenium.*</ignoreClass>
                                 <ignoreClass>org.xmlpull.v1.*</ignoreClass>
                                 <ignoreClass>org.apache.tools.ant.ExitException</ignoreClass>
+                                <ignoreClass>org.apache.commons.collections.*</ignoreClass>
                             </ignoreClasses>
                         </banDuplicateClasses>
                     </rules>
