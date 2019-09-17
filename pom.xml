@@ -68,6 +68,10 @@
                     <artifactId>commons-beanutils</artifactId>
                     <groupId>commons-beanutils</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>jcip-annotations</artifactId>
+                    <groupId>net.jcip</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -145,6 +149,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jruby/jruby-complete -->
+        <dependency>
+            <groupId>org.jruby</groupId>
+            <artifactId>jruby-complete</artifactId>
+            <version>9.1.17.0</version>
+        </dependency>
+
         <!-- overstock webdev -->
         <dependency>
             <groupId>com.overstock.webdev.test</groupId>
@@ -154,6 +165,10 @@
                 <exclusion>
                     <artifactId>cglib-nodep</artifactId>
                     <groupId>cglib</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jaxb-api</artifactId>
+                    <groupId>jaxb</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -226,6 +241,14 @@
                 <exclusion>
                     <artifactId>InventoryManagement-common-internal</artifactId>
                     <groupId>com.overstock</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>beanHelper-nodeps</artifactId>
+                    <groupId>com.overstock</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>taxonomyModel</artifactId>
+                    <groupId>com.overstock.webdev</groupId>
                 </exclusion>
             </exclusions>
         </dependency>

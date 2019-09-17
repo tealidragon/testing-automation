@@ -30,7 +30,6 @@ public class EarlyAccessUITest {
     @Test
     @WithTag(type = "type", name = "UI")
     public void findSiteWideLightboxOnHomePage() {
-
         uiSteps.goToHomePage();
     }
 }
