@@ -151,6 +151,18 @@
                     <artifactId>cglib-nodep</artifactId>
                     <groupId>cglib</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-aop</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>selenium-api</artifactId>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!-- overstock webdev -->
@@ -333,6 +345,7 @@
                         <banDuplicateClasses>
                             <ignoreClasses>
                                 <ignoreClass>javax.servlet.*</ignoreClass>
+                                <ignoreClass>org.joda.*</ignoreClass>
                             </ignoreClasses>
                         </banDuplicateClasses>
                     </rules>
