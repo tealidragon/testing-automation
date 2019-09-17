@@ -361,7 +361,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surfire.plugin}</version>
                 <configuration>
-                    <groups>tags</groups>
+                    <groups>stage</groups>
                     <skip>true</skip>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
