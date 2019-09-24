@@ -1,0 +1,5 @@
+ui/EarlyAccessUITest.class
+annotation-manifest.xml
+smoke/EarlyAccessSmokeAPITest.class
+db/EarlyAccessDbTest.class
+api/EarlyAccessAPITest.class
