@@ -63,7 +63,6 @@ node {
     }
     stage('Results') {
         archiveArtifacts artifacts: '**/target/failsafe-reports/*.xml', fingerprint: true
-        sh 'touch target/failsafe-reports/*.xml'
         junit '**/target/failsafe-reports/*.xml'
     }
 }
