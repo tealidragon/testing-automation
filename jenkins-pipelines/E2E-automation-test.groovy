@@ -14,9 +14,8 @@ node {
         } catch (err) {
 
         } finally {
-            sh "mkdir -p results/smoke; cp -r target results/smoke/"
             publishHTML(target: [
-                    reportDir  : 'target/site/serenity',
+                    reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
                     reportName : "Smoke tests report"
             ])
@@ -29,7 +28,7 @@ node {
 
         } finally {
             publishHTML(target: [
-                    reportDir  : 'target/site/serenity',
+                    reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
                     reportName : "DB tests report"
             ])
@@ -42,7 +41,7 @@ node {
 
         } finally {
             publishHTML(target: [
-                    reportDir  : 'target/site/serenity',
+                    reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
                     reportName : "API tests report"
             ])
@@ -55,7 +54,7 @@ node {
 
         } finally {
             publishHTML (target: [
-                    reportDir: 'target/site/serenity',
+                    reportDir: 'target/site/thucydides',
                     reportFiles: 'index.html',
                     reportName: "UI tests report"
             ])
@@ -63,6 +62,5 @@ node {
     }
     stage('Results') {
         junit '**/target/failsafe-reports/*.xml'
-        junit '**/target/surefire-reports/*.xml'
     }
 }
