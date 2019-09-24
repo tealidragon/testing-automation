@@ -18,10 +18,7 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "Smoke tests report",
-                    keepAll: false,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: false
+                    reportName : "Smoke tests report"
             ])
         }
     }
@@ -34,10 +31,7 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "DB tests report",
-                    keepAll: false,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: false
+                    reportName : "DB tests report"
             ])
         }
     }
@@ -50,10 +44,7 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "API tests report",
-                    keepAll: false,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: false
+                    reportName : "API tests report"
             ])
         }
     }
@@ -66,15 +57,12 @@ node {
             publishHTML (target: [
                     reportDir: 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName: "UI tests report",
-                    keepAll: false,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: false
+                    reportName: "UI tests report"
             ])
         }
     }
     stage('Results') {
-        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+        archiveArtifacts artifacts: '**/target/failsafe-reports/*.xml', fingerprint: true
         junit '**/target/failsafe-reports/*.xml'
     }
 }
