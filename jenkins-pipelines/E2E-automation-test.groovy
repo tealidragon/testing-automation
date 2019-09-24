@@ -14,6 +14,7 @@ node {
         } catch (err) {
 
         } finally {
+
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
@@ -73,6 +74,7 @@ node {
         }
     }
     stage('Results') {
+        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
         junit '**/target/failsafe-reports/*.xml'
     }
 }
