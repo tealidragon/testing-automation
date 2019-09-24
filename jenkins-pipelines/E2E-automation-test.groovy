@@ -18,7 +18,10 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "Smoke tests report"
+                    reportName : "Smoke tests report",
+                    keepAll:     true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
             ])
         }
     }
@@ -31,7 +34,10 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "DB tests report"
+                    reportName : "DB tests report",
+                    keepAll:     true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
             ])
         }
     }
@@ -44,7 +50,10 @@ node {
             publishHTML(target: [
                     reportDir  : 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName : "API tests report"
+                    reportName : "API tests report",
+                    keepAll:     true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
             ])
         }
     }
@@ -57,7 +66,10 @@ node {
             publishHTML (target: [
                     reportDir: 'target/site/thucydides',
                     reportFiles: 'index.html',
-                    reportName: "UI tests report"
+                    reportName: "UI tests report",
+                    keepAll:     true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
             ])
         }
     }
