@@ -62,7 +62,6 @@ node {
         }
     }
     stage('Results') {
-        archiveArtifacts artifacts: '**/target/failsafe-reports/*.xml', fingerprint: true
         junit '**/target/failsafe-reports/*.xml'
     }
 }
