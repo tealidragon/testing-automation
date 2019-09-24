@@ -19,7 +19,7 @@ public class EarlyAccessProductControllerAPISteps {
     //GET
     @Step
     public void earlyAccessStatusAPIcall() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         given().param("productId", new Id<ProductId>(9809209))
                 .when()
@@ -35,7 +35,7 @@ public class EarlyAccessProductControllerAPISteps {
     //GET
     @Step
     public void earlyAccessStatusAPIcall2() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         given().param("productId", new Id<ProductId>(9809209))
                 .when()
@@ -48,7 +48,7 @@ public class EarlyAccessProductControllerAPISteps {
     //GET
     @Step
     public void earlyAccessStatusAPIcallNull() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         given().when()
                 .get(earlyAccessURL + "/early/access/product/")
@@ -59,7 +59,7 @@ public class EarlyAccessProductControllerAPISteps {
     //GET
     @Step
     public void earlyAccessStatusAPIcallNotInt() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         given().param("productId", "abc123")
                 .when()
@@ -71,7 +71,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusHappy() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         int productId = 0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -96,7 +96,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusIsActiveNull() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         int productId = 0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -121,7 +121,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusStartDateNull() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         int productId = 0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -146,7 +146,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusEndDateNull() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         int productId = 0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("startDate", "2019-09-06T16:59:25.306Z")
@@ -171,7 +171,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusInvalidProducId() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         int productId = -0;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -196,7 +196,7 @@ public class EarlyAccessProductControllerAPISteps {
     //PUT (Update)
     @Step
     public void earlyAccessUpdateProductStatusNullProducId() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
         JsonValue productId = JsonValue.NULL;
         JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -221,7 +221,7 @@ public class EarlyAccessProductControllerAPISteps {
 
     @Step
     public void earlyAccessRetrieveStatus() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);

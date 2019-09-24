@@ -14,6 +14,7 @@ node {
         } catch (err) {
 
         } finally {
+            sh "mkdir -p results/smoke; cp -r target results/smoke/"
             publishHTML(target: [
                     reportDir  : 'target/site/serenity',
                     reportFiles: 'index.html',
@@ -62,5 +63,6 @@ node {
     }
     stage('Results') {
         junit '**/target/failsafe-reports/*.xml'
+        junit '**/target/surefire-reports/*.xml'
     }
 }

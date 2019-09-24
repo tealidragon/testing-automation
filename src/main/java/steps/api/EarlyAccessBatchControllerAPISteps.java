@@ -13,7 +13,7 @@ public class EarlyAccessBatchControllerAPISteps {
     //NEW
     @Step
     public void ea_post_product_batch_status() {
-        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
+        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);

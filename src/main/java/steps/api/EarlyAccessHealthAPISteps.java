@@ -8,6 +8,6 @@ public class EarlyAccessHealthAPISteps {
     @Step
     public void verifyThatAppIsRunning() {
         given()
-                .get("http://earlyaccess.cluboautomation.test.ostk.com:8080/health").then().statusCode(200);
+                .get("http://k8s-master.cluboautomation.test.ostk.com:32005/health").then().statusCode(200);
     }
 }
