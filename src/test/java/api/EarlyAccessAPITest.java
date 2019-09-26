@@ -33,6 +33,8 @@ public class EarlyAccessAPITest {
     @WithTag(type = "type", name = "API")
     public void verifyEarlyAccessUpdateProductStatusIsActiveNull() {
         earlyAccessProductControllerAPISteps.earlyAccessUpdateProductStatusIsActiveNull();
+        earlyAccessProductControllerAPISteps.
+                earlyAccessUpdateProductStatusIsActiveNull();
     }
 
     @Test

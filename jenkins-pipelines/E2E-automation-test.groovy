@@ -59,7 +59,7 @@ node {
     }
     stage('UI') {
         try {
-            sh "mvn clean verify -Dtags='type:UI'"
+            sh "mvn clean verify -Dtags='type:UI' -Dgrid=true"
         } catch (err) {
 
         } finally {

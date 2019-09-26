@@ -1,5 +1,7 @@
 package steps.api;
 
+import io.restassured.response.Response;
+import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 
 import javax.json.Json;
@@ -11,8 +13,13 @@ import static net.serenitybdd.rest.SerenityRest.given;
 
 public class EarlyAccessBatchControllerAPISteps {
     //NEW
+
+    private Response response;
+
+
     @Step
     public void ea_post_product_batch_status() {
+
         String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
 
         Random rand = new Random();
@@ -34,11 +41,15 @@ public class EarlyAccessBatchControllerAPISteps {
                 .build();
 
         System.out.println(earlyAccessProductStatusBatchRequest);
-        given().contentType("application/json")
-                .body(earlyAccessProductStatusBatchRequest.toString())
-                .when()
-                .post(earlyAccessURL + "/early/access/product/batch/status")
-                .then().statusCode(200);
+//        given().contentType("application/json")
+//                .body(earlyAccessProductStatusBatchRequest.toString())
+//                .when()
+//                .post(earlyAccessURL + "/early/access/product/batch/status")
+//                .then().statusCode(200);
+
+        response = SerenityRest.when()
+                .post(earlyAccessURL + "/early/access/product/batch/status");
+        response.then().statusCode(200);
     }
 
 }
