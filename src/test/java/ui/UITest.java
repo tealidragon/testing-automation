@@ -16,7 +16,7 @@ import steps.ui.UISteps;
         @WithTag("type:UI"),
         @WithTag("pattern:Screenplay")
 })
-public class EarlyAccessUITest {
+public class UITest {
 
     @Managed
     WebDriver driver;

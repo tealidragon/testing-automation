@@ -1,7 +1,5 @@
 package steps.api;
 
-import com.overstock.model.Id;
-import com.overstock.model.ids.ProductId;
 import net.thucydides.core.annotations.Step;
 
 import javax.json.Json;
@@ -14,16 +12,16 @@ import static net.serenitybdd.rest.SerenityRest.given;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 
-public class EarlyAccessProductControllerAPISteps {
+public class ProductControllerAPISteps {
 
     //GET
     @Step
-    public void earlyAccessStatusAPIcall() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void StatusAPIcall() {
+        String URL = "https://swapi.co/api";
 
-        given().param("productId", new Id<ProductId>(9809209))
+        given().param("productId", 9809209)
                 .when()
-                .get(earlyAccessURL + "/early/access/product/" + new Id<ProductId>(9809209))
+                .get(URL + "/early/access/product/" + 9809209)
                 .then().statusCode(200)
                 .body("productId", is(9809209))
                 .body("isActive", is(false))
@@ -34,12 +32,12 @@ public class EarlyAccessProductControllerAPISteps {
 
     //GET
     @Step
-    public void earlyAccessStatusAPIcall2() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void StatusAPIcall2() {
+        String URL = "https://swapi.co/api";
 
-        given().param("productId", new Id<ProductId>(9809209))
+        given().param("productId", 9809209)
                 .when()
-                .get(earlyAccessURL + "/early/access/product/" + new Id<ProductId>(9809209))
+                .get(URL + "/early/access/product/" + 9809209)
                 .then()
                 .statusCode(200)
                 .body("productId", is(9809209));
@@ -47,40 +45,40 @@ public class EarlyAccessProductControllerAPISteps {
 
     //GET
     @Step
-    public void earlyAccessStatusAPIcallNull() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void StatusAPIcallNull() {
+        String URL = "https://swapi.co/api";
 
         given().when()
-                .get(earlyAccessURL + "/early/access/product/")
+                .get(URL + "/early/access/product/")
                 .then()
                 .statusCode(404);
     }
 
     //GET
     @Step
-    public void earlyAccessStatusAPIcallNotInt() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void StatusAPIcallNotInt() {
+        String URL = "https://swapi.co/api";
 
         given().param("productId", "abc123")
                 .when()
-                .get(earlyAccessURL + "/early/access/product/abc123")
+                .get(URL + "/early/access/product/abc123")
                 .then()
                 .statusCode(400);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusHappy() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusHappy() {
+        String URL = "https://swapi.co/api";
         int productId = 0;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", true)
                 .add("productId", productId)
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -89,23 +87,23 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusIsActiveNull() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusIsActiveNull() {
+        String URL = "https://swapi.co/api";
         int productId = 0;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", JsonValue.NULL)
                 .add("productId", productId)
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -114,23 +112,23 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusStartDateNull() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusStartDateNull() {
+        String URL = "https://swapi.co/api";
         int productId = 0;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", true)
                 .add("productId", productId)
                 .add("startDate", JsonValue.NULL)
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -139,23 +137,23 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusEndDateNull() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusEndDateNull() {
+        String URL = "https://swapi.co/api";
         int productId = 0;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", true)
                 .add("productId", productId)
                 .add("endDate", JsonValue.NULL)
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -164,23 +162,23 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusInvalidProducId() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusInvalidProducId() {
+        String URL = "https://swapi.co/api";
         int productId = -0;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", false)
                 .add("productId", productId)
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -189,23 +187,23 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(200);
     }
 
     //PUT (Update)
     @Step
-    public void earlyAccessUpdateProductStatusNullProducId() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void UpdateProductStatusNullProducId() {
+        String URL = "https://swapi.co/api";
         JsonValue productId = JsonValue.NULL;
-        JsonObject earlyAccessProductInfo = Json.createObjectBuilder()
+        JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
                 .add("isActive", false)
                 .add("productId", productId)
                 .add("startDate", "2019-09-06T16:59:25.306Z")
                 .build();
         JsonObject productUpdateRequest = Json.createObjectBuilder()
-                .add("earlyAccessProduct", earlyAccessProductInfo)
+                .add("Product", ProductInfo)
                 .add("productId", productId)
                 .build();
 
@@ -214,28 +212,28 @@ public class EarlyAccessProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(earlyAccessURL + "/early/access/product/" + productId)
+                .put(URL + "/early/access/product/" + productId)
                 .then().statusCode(400);
     }
 
 
     @Step
-    public void earlyAccessRetrieveStatus() {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void RetrieveStatus() {
+        String URL = "https://swapi.co/api";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);
 
         JsonArray productJsons = Json.createArrayBuilder().add(productId).build();
-        JsonObject earlyAccessProductStatusBatchRequest = Json.createObjectBuilder()
+        JsonObject ProductStatusBatchRequest = Json.createObjectBuilder()
                 .add("productIds", productJsons)
                 .build();
 
-        System.out.println(earlyAccessProductStatusBatchRequest);
+        System.out.println(ProductStatusBatchRequest);
         given().contentType("application/json")
-                .body(earlyAccessProductStatusBatchRequest.toString())
+                .body(ProductStatusBatchRequest.toString())
                 .when()
-                .post(earlyAccessURL + "/early/access/product/batch/status")
+                .post(URL + "/early/access/product/batch/status")
                 .then().statusCode(200);
     }
 

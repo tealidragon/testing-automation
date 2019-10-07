@@ -8,6 +8,6 @@ public class UISteps {
 
     @Step
     public void goToHomePage() {
-        homePage.findFlights();
+        homePage.findOverview();
     }
 }

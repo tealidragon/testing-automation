@@ -7,15 +7,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends PageObject {
 
-    @FindBy(id = "sitewide-lightbox-container")
-    WebElement sitewideLightbox;
+    @FindBy(id = "overview")
+    WebElement overview;
 
     public HomePage(WebDriver driver) {
         super(driver);
         open();
     }
 
-    public void findFlights() {
-        sitewideLightbox.isDisplayed();
+    public void findOverview() {
+        overview.isDisplayed();
     }
 }

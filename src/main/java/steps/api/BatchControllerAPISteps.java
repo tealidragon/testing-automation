@@ -11,7 +11,7 @@ import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
 
-public class EarlyAccessBatchControllerAPISteps {
+public class BatchControllerAPISteps {
     //NEW
 
     private Response response;
@@ -20,7 +20,7 @@ public class EarlyAccessBatchControllerAPISteps {
     @Step
     public void ea_post_product_batch_status() {
 
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+        String URL = "https://swapi.co/api";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);
@@ -36,19 +36,19 @@ public class EarlyAccessBatchControllerAPISteps {
         for (int productIdInArray : productIds) {
             productJsonBuilder.add(productIdInArray).build();
         }
-        JsonObject earlyAccessProductStatusBatchRequest = Json.createObjectBuilder()
+        JsonObject ProductStatusBatchRequest = Json.createObjectBuilder()
                 .add("productIds", productJsonBuilder.build())
                 .build();
 
-        System.out.println(earlyAccessProductStatusBatchRequest);
+        System.out.println(ProductStatusBatchRequest);
 //        given().contentType("application/json")
-//                .body(earlyAccessProductStatusBatchRequest.toString())
+//                .body(ProductStatusBatchRequest.toString())
 //                .when()
-//                .post(earlyAccessURL + "/early/access/product/batch/status")
+//                .post(URL + "/early/access/product/batch/status")
 //                .then().statusCode(200);
 
         response = SerenityRest.when()
-                .post(earlyAccessURL + "/early/access/product/batch/status");
+                .post(URL + "/early/access/product/batch/status");
         response.then().statusCode(200);
     }
 

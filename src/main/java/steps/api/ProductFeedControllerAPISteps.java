@@ -12,7 +12,7 @@ import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
 
-public class EarlyAccessProductFeedControllerAPISteps {
+public class ProductFeedControllerAPISteps {
 
     List<Integer> randInts = new ArrayList<Integer>();
 
@@ -36,14 +36,14 @@ public class EarlyAccessProductFeedControllerAPISteps {
 
 
     @Step
-    public void earlyAccessFileUpload() throws IOException {
-//        String earlyAccessURL = "http://earlyaccess.cluboautomation.test.ostk.com:8080";
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void FileUpload() throws IOException {
+//        String URL = "http://.cluboautomation.test.ostk.com:8080";
+        String URL = "https://swapi.co/api";
 
         boolean productsFile = false;
         File file;
         try {
-            file = new File("EarlyAccessProducts.txt");
+            file = new File("Products.txt");
             file.createNewFile();
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(file.getName()));
@@ -57,7 +57,7 @@ public class EarlyAccessProductFeedControllerAPISteps {
 
             given().multiPart("file", file, "application/txt")
                     .when()
-                    .post(earlyAccessURL + "/early/access/product/feed/file/upload")
+                    .post(URL + "/early/access/product/feed/file/upload")
                     .then().statusCode(200);
 
         } catch (IOException e) {
@@ -67,13 +67,13 @@ public class EarlyAccessProductFeedControllerAPISteps {
     }
 
     @Step
-    public void earlyAccessFileUploadUpdate() throws IOException {
-        String earlyAccessURL = "http://k8s-master.cluboautomation.test.ostk.com:32005";
+    public void FileUploadUpdate() throws IOException {
+        String URL = "https://swapi.co/api";
 
         boolean productsFile = false;
         File file;
         try {
-            file = new File("EarlyAccessProductsUpdate.txt");
+            file = new File("ProductsUpdate.txt");
             file.createNewFile();
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(file.getName()));
@@ -86,7 +86,7 @@ public class EarlyAccessProductFeedControllerAPISteps {
             System.out.println(file.getAbsolutePath());
             given().multiPart("file", file, "application/txt")
                     .when()
-                    .put(earlyAccessURL + "/early/access/product/feed/file/upload/update")
+                    .put(URL + "/early/access/product/feed/file/upload/update")
                     .then().statusCode(200);
 
         } catch (IOException e) {

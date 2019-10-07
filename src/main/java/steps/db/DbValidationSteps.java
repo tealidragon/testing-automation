@@ -1,6 +1,6 @@
 package steps.db;
 
-import clubo.PostgresDb;
+import DB.PostgresDb;
 import net.thucydides.core.annotations.Step;
 
 import java.sql.Connection;
@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import static net.serenitybdd.rest.SerenityRest.given;
+import static org.junit.Assert.assertEquals;
 
 public class DbValidationSteps {
 
@@ -20,8 +21,7 @@ public class DbValidationSteps {
 
         ResultSet resultSet = statement.executeQuery("SELECT * FROM \"public\".early_access_product;");
 
-        given()
-                .get("http://blazedemo.com").then().statusCode(200);
+        assertEquals(ResultSet.class, resultSet);
     }
 
 }

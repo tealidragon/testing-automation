@@ -3,7 +3,7 @@
 node {
     stage('Git checkout') { // for display purposes
         git(
-                url: 'https://git.overstock.com/scm/clubo/earlyaccess-automation-testing.git',
+                url: 'https://git.com/scm/automation-testing.git',
                 credentialsId: 'b9cdfc06-1cbc-4d1d-b489-87414f67db3b',
                 branch: 'master'
         )

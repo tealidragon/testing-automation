@@ -11,14 +11,14 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @RunWith(SerenityRunner.class)
-public class EarlyAccessDbTest {
+public class DbTest {
 
     @Steps
     DbValidationSteps dbValidationSteps;
 
     @Test
     @WithTag(type = "type", name = "DB")
-    public void verifyEarlyAccessDB() throws IOException, SQLException {
+    public void verifyDB() throws IOException, SQLException {
         dbValidationSteps.verifyThatDbIsRunning();
     }
 }
