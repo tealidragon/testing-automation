@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>earlyAccess</name>
-    <groupId>com.earlyaccess</groupId>
-    <artifactId>e2e-automation-pipeline</artifactId>
+    <name>testing</name>
+    <groupId>com.ui-restassured-testing</groupId>
+    <artifactId>testing-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -23,7 +23,6 @@
         <!-- WebDriver -->
         <webdriver.driver>chrome</webdriver.driver>
         <webdriver.manager.version>1.7.2</webdriver.manager.version>
-        <!-- Overstock Properties-->
         <webdb.version>3.0</webdb.version>
     </properties>
 
