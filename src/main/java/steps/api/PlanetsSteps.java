@@ -1,6 +1,8 @@
 package steps.api;
 
+import io.restassured.response.Response;
 import net.thucydides.core.annotations.Step;
+import org.apache.http.HttpStatus;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,8 +13,41 @@ import java.util.List;
 import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
+import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 
-public class ProductFeedControllerAPISteps {
+public class PlanetsSteps {
+
+    private String PLANETS_URL = "http://swapi.co/api/planets";
+
+    private Response response;
+
+    //Search
+    @Step
+    public void peopleSearchParam() {
+
+        given().param("id", 1)
+                .when()
+                .get(PLANETS_URL + "/?search=skywalker")
+                .then().statusCode(200)
+                .body("gender", isEmptyOrNullString())
+                .body("birth_year", isEmptyOrNullString())
+                .body("eye_color", isEmptyOrNullString())
+                .body("name", isEmptyOrNullString());
+
+    }
+
+    @Step
+    public void planet1Check() {
+
+        response = given().contentType("application/json")
+                .header("Content-Type", "application/json")
+                .when()
+                .get(PLANETS_URL + "/1");
+        response.then().statusCode(HttpStatus.SC_OK)
+//                .defaultParser(Parser.JSON)
+                .body("climate", equalToIgnoringCase("Arid"));
+    }
 
     List<Integer> randInts = new ArrayList<Integer>();
 
@@ -58,7 +93,7 @@ public class ProductFeedControllerAPISteps {
             given().multiPart("file", file, "application/txt")
                     .when()
                     .post(URL + "/early/access/product/feed/file/upload")
-                    .then().statusCode(200);
+                    .then().statusCode(404);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -87,7 +122,7 @@ public class ProductFeedControllerAPISteps {
             given().multiPart("file", file, "application/txt")
                     .when()
                     .put(URL + "/early/access/product/feed/file/upload/update")
-                    .then().statusCode(200);
+                    .then().statusCode(404);
 
         } catch (IOException e) {
             e.printStackTrace();

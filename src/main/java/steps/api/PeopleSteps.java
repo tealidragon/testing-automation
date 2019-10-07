@@ -1,6 +1,10 @@
 package steps.api;
 
+import io.restassured.parsing.Parser;
+import io.restassured.response.Response;
+import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.Step;
+import org.apache.http.HttpStatus;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -9,47 +13,52 @@ import javax.json.JsonValue;
 import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 
-public class ProductControllerAPISteps {
+/**
+ * A People resource is an individual person or character within the Star Wars universe.
+ */
+//@DefaultUrl("http://swapi.co/api/people/")
+public class PeopleSteps {
 
-    //GET
+    private String BASE_URL = "http://swapi.co/api/people";
+
+    private Response response;
+    //Search
     @Step
-    public void StatusAPIcall() {
-        String URL = "https://swapi.co/api";
+    public void peopleSearchParam() {
 
-        given().param("productId", 9809209)
+        given().param("id", 1)
                 .when()
-                .get(URL + "/early/access/product/" + 9809209)
+                .get(BASE_URL + "/?search=skywalker")
                 .then().statusCode(200)
-                .body("productId", is(9809209))
-                .body("isActive", is(false))
-                .body("startDate", isEmptyOrNullString())
-                .body("endDate", isEmptyOrNullString());
+                .body("gender", isEmptyOrNullString())
+                .body("birth_year", isEmptyOrNullString())
+                .body("eye_color", isEmptyOrNullString())
+                .body("name", isEmptyOrNullString());
 
     }
 
     //GET
     @Step
-    public void StatusAPIcall2() {
-        String URL = "https://swapi.co/api";
+    public void peapleCheckPeople1() {
 
-        given().param("productId", 9809209)
+        response = given().contentType("application/json")
+                .header("Content-Type", "application/json")
                 .when()
-                .get(URL + "/early/access/product/" + 9809209)
-                .then()
-                .statusCode(200)
-                .body("productId", is(9809209));
+                .get(BASE_URL + "/1");
+        response.then().statusCode(HttpStatus.SC_OK)
+                .defaultParser(Parser.JSON)
+                .body(contains("Skywalker"));
     }
 
     //GET
     @Step
     public void StatusAPIcallNull() {
-        String URL = "https://swapi.co/api";
 
         given().when()
-                .get(URL + "/early/access/product/")
+                .get(BASE_URL + "1")
                 .then()
                 .statusCode(404);
     }
@@ -57,19 +66,17 @@ public class ProductControllerAPISteps {
     //GET
     @Step
     public void StatusAPIcallNotInt() {
-        String URL = "https://swapi.co/api";
 
         given().param("productId", "abc123")
                 .when()
-                .get(URL + "/early/access/product/abc123")
+                .get(BASE_URL + "1")
                 .then()
-                .statusCode(400);
+                .statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusHappy() {
-        String URL = "https://swapi.co/api";
         int productId = 0;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -87,14 +94,13 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusIsActiveNull() {
-        String URL = "https://swapi.co/api";
         int productId = 0;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -112,14 +118,13 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusStartDateNull() {
-        String URL = "https://swapi.co/api";
         int productId = 0;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -137,14 +142,13 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusEndDateNull() {
-        String URL = "https://swapi.co/api";
         int productId = 0;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("startDate", "2019-09-06T16:59:25.306Z")
@@ -162,14 +166,13 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusInvalidProducId() {
-        String URL = "https://swapi.co/api";
         int productId = -0;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -187,14 +190,13 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
     //PUT (Update)
     @Step
     public void UpdateProductStatusNullProducId() {
-        String URL = "https://swapi.co/api";
         JsonValue productId = JsonValue.NULL;
         JsonObject ProductInfo = Json.createObjectBuilder()
                 .add("endDate", "2019-09-06T16:59:25.306Z")
@@ -212,14 +214,12 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .put(URL + "/early/access/product/" + productId)
-                .then().statusCode(400);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
-
 
     @Step
     public void RetrieveStatus() {
-        String URL = "https://swapi.co/api";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);
@@ -233,8 +233,8 @@ public class ProductControllerAPISteps {
         given().contentType("application/json")
                 .body(ProductStatusBatchRequest.toString())
                 .when()
-                .post(URL + "/early/access/product/batch/status")
-                .then().statusCode(200);
+                .get(BASE_URL + "1")
+                .then().statusCode(404);
     }
 
 }

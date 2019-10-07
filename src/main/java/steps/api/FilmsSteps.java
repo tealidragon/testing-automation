@@ -9,10 +9,10 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import java.util.Random;
 
-import static net.serenitybdd.rest.SerenityRest.given;
-
-public class BatchControllerAPISteps {
+public class FilmsSteps {
     //NEW
+
+    private String FILMS_URL = "https://swapi.co/api/films";
 
     private Response response;
 
@@ -20,7 +20,6 @@ public class BatchControllerAPISteps {
     @Step
     public void ea_post_product_batch_status() {
 
-        String URL = "https://swapi.co/api";
 
         Random rand = new Random();
         int productId = rand.nextInt(10000);
@@ -48,8 +47,8 @@ public class BatchControllerAPISteps {
 //                .then().statusCode(200);
 
         response = SerenityRest.when()
-                .post(URL + "/early/access/product/batch/status");
-        response.then().statusCode(200);
+                .post(FILMS_URL+"/early/access/product/batch/status");
+        response.then().statusCode(404);
     }
 
 }

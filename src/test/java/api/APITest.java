@@ -5,9 +5,9 @@ import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import steps.api.BatchControllerAPISteps;
-import steps.api.ProductControllerAPISteps;
-import steps.api.ProductFeedControllerAPISteps;
+import steps.api.FilmsSteps;
+import steps.api.PeopleSteps;
+import steps.api.PlanetsSteps;
 
 import java.io.IOException;
 
@@ -15,97 +15,103 @@ import java.io.IOException;
 public class APITest {
 
     @Steps
-    ProductControllerAPISteps ProductControllerAPISteps;
+    PeopleSteps peopleSteps;
 
     @Steps
-    BatchControllerAPISteps BatchControllerAPISteps;
+    FilmsSteps filmsSteps;
 
     @Steps
-    ProductFeedControllerAPISteps ProductFeedControllerAPISteps;
+    PlanetsSteps planetsSteps;
 
     @Test
     @WithTag(type = "type", name = "API")
-    public void verifyStatus() {
-        ProductControllerAPISteps.StatusAPIcall();
+    public void verifyPeopleSearch() {
+        peopleSteps.peopleSearchParam();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusIsActiveNull() {
-        ProductControllerAPISteps.UpdateProductStatusIsActiveNull();
-        ProductControllerAPISteps.
+        peopleSteps.UpdateProductStatusIsActiveNull();
+        peopleSteps.
                 UpdateProductStatusIsActiveNull();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusStartDateNull() {
-        ProductControllerAPISteps.UpdateProductStatusStartDateNull();
+        peopleSteps.UpdateProductStatusStartDateNull();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusEndDateNull() {
-        ProductControllerAPISteps.UpdateProductStatusEndDateNull();
+        peopleSteps.UpdateProductStatusEndDateNull();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusInvalidProducId() {
-        ProductControllerAPISteps.UpdateProductStatusInvalidProducId();
+        peopleSteps.UpdateProductStatusInvalidProducId();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusNullProducId() {
-        ProductControllerAPISteps.UpdateProductStatusNullProducId();
+        peopleSteps.UpdateProductStatusNullProducId();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyStatus2() {
-        ProductControllerAPISteps.StatusAPIcall2();
+        peopleSteps.peapleCheckPeople1();
+    }
+
+    @Test
+    @WithTag(type = "type", name = "API")
+    public void verifyPlanet1() {
+        planetsSteps.planet1Check();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyStatusNull() {
-        ProductControllerAPISteps.StatusAPIcallNull();
+        peopleSteps.StatusAPIcallNull();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyStatusNotInt() {
-        ProductControllerAPISteps.StatusAPIcallNotInt();
+        peopleSteps.StatusAPIcallNotInt();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyUpdateProductStatusOrExpiry() {
-        ProductControllerAPISteps.UpdateProductStatusHappy();
+        peopleSteps.UpdateProductStatusHappy();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyRetrieveBatchStatus() {
-        ProductControllerAPISteps.RetrieveStatus();
+        peopleSteps.RetrieveStatus();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyProductIdsUploadAPI() throws IOException {
-        ProductFeedControllerAPISteps.FileUpload();
+        planetsSteps.FileUpload();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyProductIdsUploadUpdateAPI() throws IOException {
-        ProductFeedControllerAPISteps.FileUploadUpdate();
+        planetsSteps.FileUploadUpdate();
     }
 
     @Test
     @WithTag(type = "type", name = "API")
     public void verifyProductIdsbatchStatus() {
-        BatchControllerAPISteps.ea_post_product_batch_status();
+        filmsSteps.ea_post_product_batch_status();
     }
 }
