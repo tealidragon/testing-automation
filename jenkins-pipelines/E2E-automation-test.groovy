@@ -2,11 +2,7 @@
 
 node {
     stage('Git checkout') { // for display purposes
-        git(
-                url: 'https://git.com/scm/automation-testing.git',
-                credentialsId: 'b9cdfc06-1cbc-4d1d-b489-87414f67db3b',
-                branch: 'master'
-        )
+        git 'https://github.com/tealidragon/testing-automation.git'
     }
     stage('Smoke') {
         try {
