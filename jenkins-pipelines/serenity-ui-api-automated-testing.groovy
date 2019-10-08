@@ -18,25 +18,33 @@ node {
     stage('Db') {
         try {
             sh "mvn clean verify -Dtags='type:DB'"
-        } catch (err)
+        } catch (err){
+
+        }
 
     }
     stage('API') {
         try {
             sh "mvn clean verify -Dtags='type:API'"
-        } catch (err)
+        } catch (err){
+
+        }
 
     }
     stage('PeopleAPI') {
         try {
             sh "mvn clean verify -Dtags='type:PeopleAPI'"
-        } catch (err)
+        } catch (err){
+
+        }
 
     }
     stage('UI') {
         try {
             sh "mvn clean verify -Dtags='type:UI'"
-        } catch (err)
+        } catch (err){
+
+        }
 
     }
     stage('Publish Results') {
@@ -47,6 +55,6 @@ node {
                 alwaysLinkToLastBuild: true,
                 allowMissing: false
         ])
-        junit '**/target/failsafe-reports/*.xml'
+//        junit '**/target/failsafe-reports/*.xml'
     }
 }
