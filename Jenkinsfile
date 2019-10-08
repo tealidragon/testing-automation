@@ -23,7 +23,7 @@ node {
                     reportDir  : 'serenity-automated-testing/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName : 'Smoke tests report',
-                    reportTitles : 'Smoke Tests'
+                    reportTitles         : 'Tests Report'
             ])
         }
     }
@@ -41,6 +41,8 @@ node {
                     reportDir  : 'serenity-automated-testing/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName : "DB tests report",
+                    reportTitles         : 'Tests Report'
+
             ])
         }
     }
@@ -58,6 +60,7 @@ node {
                     reportDir  : 'serenity-automated-testing/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName : "API tests report",
+                    reportTitles         : 'Tests Report'
             ])
         }
     }
@@ -72,9 +75,11 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir  : 'serenity-automated-testing/target/site/serenity',
-                    reportFiles: 'index.html',
-                    reportName : "PeopleAPIAPI tests report",
+                    reportDir            : 'serenity-automated-testing/target/site/serenity',
+                    reportFiles          : 'index.html',
+                    reportName           : "PeopleAPIAPI tests report",
+                    reportTitles         : 'Tests Report'
+
             ])
         }
     }
@@ -89,9 +94,10 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir  : 'serenity-automated-testing/target/site/serenity',
-                    reportFiles: 'index.html',
-                    reportName: "UI tests report",
+                    reportDir            : 'serenity-automated-testing/target/site/serenity',
+                    reportFiles          : 'index.html',
+                    reportName           : "UI tests report",
+                    reportTitles         : 'Tests Report'
             ])
         }
     }
