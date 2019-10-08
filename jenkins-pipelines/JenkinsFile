@@ -12,7 +12,7 @@ node {
         } finally {
 
             publishHTML(target: [
-                    reportDir  : 'target/site/serenity',
+                    reportDir  : 'serenity-ui-api-automated-testing/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName : 'Smoke tests report',
                     keepAll:     true,
@@ -84,8 +84,5 @@ node {
                     allowMissing: false
             ])
         }
-    }
-    stage('Results') {
-        junit '**/target/failsafe-reports/*.xml'
     }
 }

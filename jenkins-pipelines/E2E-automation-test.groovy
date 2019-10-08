@@ -1,5 +1,4 @@
-#!/usr/bin/env groovy
-
+#!groovy
 node {
     stage('Git checkout') { // for display purposes
         git 'https://github.com/tealidragon/testing-automation.git'
@@ -71,7 +70,7 @@ node {
     }
     stage('UI') {
         try {
-            sh "mvn clean verify -Dtags='type:UI' -Dgrid=true"
+            sh "mvn clean verify -Dtags='type:UI'"
         } catch (err) {
 
         } finally {
@@ -84,8 +83,5 @@ node {
                     allowMissing: false
             ])
         }
-    }
-    stage('Results') {
-        junit '**/target/failsafe-reports/*.xml'
     }
 }
