@@ -1,4 +1,9 @@
 #!groovy
+
+def serenityTargetBasePath = 'serenity-ui-api-automated-testing' // base path to your '/target' folder where the serenity reports live
+def serenityAppFolderName = 'serenity-ui-api-testing' // your report folder name. make it unique!
+
+
 node {
     stage('Git checkout') { // for display purposes
         git 'https://github.com/tealidragon/testing-automation.git'
@@ -84,7 +89,13 @@ node {
             ])
         }
     }
-    stage('Results') {
+    stage('Publish Results') {
+        sh "cd ${serenityTargetBasePath}/target/site/serenity && find * -type f -exec curl -u daemon:xampp --ftp-create-dirs -T {} ftp://${serenityReportServer}/ftpUploads/${serenityAppFolderName}/serenity/{} \\;"
+        sh "curl -X GET http://${serenityReportServer}:8080/archive/${serenityAppFolderName}/serenity"
+        echo "Link to live report: http://${serenityReportServer}:8080/reports/${serenityAppFolderName}/live/index.html"
+        currentBuild.description = "Click <a href='http://${serenityReportServer}:8080/${serenityAppFolderName}/live'>here</a> for Serenity Reports"
+        sh "cd ../../../../"
+
         junit '**/target/failsafe-reports/*.xml'
     }
 }

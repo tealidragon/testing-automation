@@ -21,7 +21,7 @@ https://www.blazemeter.com/blog/qa-automation-pipeline-learn-how-to-build-your-o
 
 Run group of tests by providing the maven parameter -Dtags:
  
- `mvn clean verify -Dtags="type:Smoke"`
+`mvn clean verify -Dtags="type:Smoke"`
 
 `mvn clean verify -Dtags="type:API"`
 
