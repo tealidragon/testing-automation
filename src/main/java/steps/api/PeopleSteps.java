@@ -2,7 +2,6 @@ package steps.api;
 
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
-import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.Step;
 import org.apache.http.HttpStatus;
 
@@ -14,6 +13,7 @@ import java.util.Random;
 
 import static net.serenitybdd.rest.SerenityRest.given;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 
 /**
@@ -22,17 +22,18 @@ import static org.hamcrest.text.IsEmptyString.isEmptyOrNullString;
 //@DefaultUrl("http://swapi.co/api/people/")
 public class PeopleSteps {
 
-    private String BASE_URL = "http://swapi.co/api/people";
+    private String PEOPLE_BASE_PATH = "http://swapi.co/api/people";
 
     private Response response;
+
     //Search
-    @Step
-    public void peopleSearchParam() {
+    @Step("Basic Search for {0}")
+    public void peopleSearchParam(String searchForName) {
 
         given().param("id", 1)
                 .when()
-                .get(BASE_URL + "/?search=skywalker")
-                .then().statusCode(200)
+                .get(PEOPLE_BASE_PATH + "/?search=" + searchForName)
+                .then().statusCode(HttpStatus.SC_OK)
                 .body("gender", isEmptyOrNullString())
                 .body("birth_year", isEmptyOrNullString())
                 .body("eye_color", isEmptyOrNullString())
@@ -47,10 +48,10 @@ public class PeopleSteps {
         response = given().contentType("application/json")
                 .header("Content-Type", "application/json")
                 .when()
-                .get(BASE_URL + "/1");
+                .get(PEOPLE_BASE_PATH + "/1");
         response.then().statusCode(HttpStatus.SC_OK)
                 .defaultParser(Parser.JSON)
-                .body(contains("Skywalker"));
+                .body("name", containsString("Skywalker"));
     }
 
     //GET
@@ -58,7 +59,7 @@ public class PeopleSteps {
     public void StatusAPIcallNull() {
 
         given().when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then()
                 .statusCode(404);
     }
@@ -69,7 +70,7 @@ public class PeopleSteps {
 
         given().param("productId", "abc123")
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then()
                 .statusCode(404);
     }
@@ -94,7 +95,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -118,7 +119,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -142,7 +143,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -166,7 +167,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -190,7 +191,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -214,7 +215,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(productUpdateRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
@@ -233,7 +234,7 @@ public class PeopleSteps {
         given().contentType("application/json")
                 .body(ProductStatusBatchRequest.toString())
                 .when()
-                .get(BASE_URL + "1")
+                .get(PEOPLE_BASE_PATH + "1")
                 .then().statusCode(404);
     }
 
