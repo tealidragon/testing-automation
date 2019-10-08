@@ -20,7 +20,7 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir  : 'serenity-automated-testing/target/site/serenity',
+                    reportDir            : '\\target\\site\\serenity',
                     reportFiles: 'index.html',
                     reportName : 'Smoke tests report',
                     reportTitles         : 'Tests Report'
@@ -38,7 +38,7 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir  : 'serenity-automated-testing/target/site/serenity',
+                    reportDir            : '\\target\\site\\serenity',
                     reportFiles: 'index.html',
                     reportName : "DB tests report",
                     reportTitles         : 'Tests Report'
@@ -57,7 +57,7 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir  : 'serenity-automated-testing/target/site/serenity',
+                    reportDir            : '\\target\\site\\serenity',
                     reportFiles: 'index.html',
                     reportName : "API tests report",
                     reportTitles         : 'Tests Report'
@@ -75,7 +75,7 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir            : 'serenity-automated-testing/target/site/serenity',
+                    reportDir            : '\\target\\site\\serenity',
                     reportFiles          : 'index.html',
                     reportName           : "PeopleAPIAPI tests report",
                     reportTitles         : 'Tests Report'
@@ -94,7 +94,7 @@ node {
                     alwaysLinkToLastBuild: true,
                     escapeUnderscores    : false,
                     keepAll              : true,
-                    reportDir            : 'serenity-automated-testing/target/site/serenity',
+                    reportDir            : '\\target\\site\\serenity',
                     reportFiles          : 'index.html',
                     reportName           : "UI tests report",
                     reportTitles         : 'Tests Report'
