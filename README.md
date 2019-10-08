@@ -12,9 +12,9 @@ https://www.blazemeter.com/blog/qa-automation-pipeline-learn-how-to-build-your-o
 
 ###Prerequisites: 
 
- 1. Java >= install Java 8 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
- 2. Apache Maven >= install Maven 3.0 https://maven.apache.org/install.html
- 3. Taurus >= install Taurus for performance testing https://gettaurus.org/?utm_source=blog&utm_medium=BM_blog&utm_campaign=qa-automation-pipeline-learn-how-to-build-your-own
+ 1. Java >= install Java 8 [Java 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+ 2. Apache Maven >= install Maven 3.0 [Maven 3.0 Download](https://maven.apache.org/install.html)
+ 3. Taurus >= install Taurus for performance testing [Taurus install instructions](https://gettaurus.org/?utm_source=blog&utm_medium=BM_blog&utm_campaign=qa-automation-pipeline-learn-how-to-build-your-own)
 
  4. IDE: Enable Annotations Processing in IntelliJ
 
